@@ -34,7 +34,7 @@ public class ListingTest extends BaseTest {
         for(WebElement p : afterProductsFromAToZ){
             afterProductsFromAToZList.add(p.getText());
         }
-        Collections.sort(beforeProductsFromAToZList, Collections.reverseOrder());
+        Collections.sort(beforeProductsFromAToZList);
         Assert.assertEquals(beforeProductsFromAToZList, afterProductsFromAToZList);
     }
 }
