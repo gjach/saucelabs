@@ -118,9 +118,11 @@ public class ListingTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
+        utils = new Utils();
+        utils.cleanCart(driver);
     }
 
     @Test
@@ -129,7 +131,7 @@ public class ListingTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
@@ -184,6 +186,8 @@ public class ListingTest extends BaseTest {
         }
         int itemsInCart = Integer.parseInt(driver.findElement(By.cssSelector(".shopping_cart_link")).getText());
         Assert.assertEquals(itemsInCart, 1);
+        utils = new Utils();
+        utils.cleanCart(driver);
     }
 
     @Test
@@ -193,7 +197,7 @@ public class ListingTest extends BaseTest {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.id("back-to-products")).click();
         driver.findElement(By.cssSelector("[id*='remove']")).click();
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();

@@ -38,6 +38,8 @@ public class ProductTest extends BaseTest {
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
+        utils = new Utils();
+        utils.cleanCart(driver);
     }
     @Test
     public void isRemoveButtonVisible() {
@@ -46,9 +48,11 @@ public class ProductTest extends BaseTest {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         String removeButton = driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
         Assert.assertEquals(removeButton, "REMOVE");
+        utils = new Utils();
+        utils.cleanCart(driver);
     }
     @Test
     public void backToListingButton() {
@@ -67,9 +71,9 @@ public class ProductTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
-        driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        driver.findElement(By.id("remove-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id='add-to-cart-sauce-labs-backpack']")).click();
+        driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='Sauce Labs Backpack']")).click();
+        driver.findElement(By.cssSelector("[id*='remove-']")).click();
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
     }

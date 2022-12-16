@@ -30,6 +30,8 @@ public class CheckoutOverviewTest extends BaseTest {
         driver.findElement(By.id("continue")).click();
         List<WebElement> productsInCart = driver.findElements(By.cssSelector(".inventory_item_name"));
         Assert.assertEquals(randomNum, productsInCart.size());
+        utils = new Utils();
+        utils.cleanCart(driver);
     }
     @Test
     public void totalPrice() {

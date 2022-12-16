@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.List;
+
 public class CartTest extends BaseTest {
 
     @Test
@@ -12,7 +14,7 @@ public class CartTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         WebElement title = driver.findElement(By.cssSelector(".inventory_item_name"));
         WebElement description = driver.findElement(By.cssSelector(".inventory_item_desc"));
@@ -31,7 +33,7 @@ public class CartTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("continue-shopping")).click();
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
@@ -43,9 +45,12 @@ public class CartTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
-        driver.findElement(By.cssSelector("[id*='remove-']")).click();
+        List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
+        for (int i=1;i<=removeButtons.size(); i++){
+            driver.findElement(By.cssSelector("[id*='remove-']")).click();
+        }
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
     }
@@ -55,7 +60,7 @@ public class CartTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
         String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
