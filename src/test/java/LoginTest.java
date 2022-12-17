@@ -12,8 +12,8 @@ public class LoginTest extends BaseTest {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        String currentURL = "https://www.saucedemo.com/inventory.html";
-        Assert.assertEquals(driver.getCurrentUrl(), currentURL, "There was a problem with login");
+        String expectedURL = "https://www.saucedemo.com/inventory.html";
+        Assert.assertEquals(driver.getCurrentUrl(), expectedURL, "There was a problem with login");
     }
 
     @Test
