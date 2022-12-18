@@ -9,11 +9,14 @@ public class LoginTest extends BaseTest {
 
     LoginPage loginPage;
 
+    String username = "standard_user";
+    String password = "secret_sauce";
+
     @Test
     public void loginTest() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(driver);
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(username, password);
         String expectedURL = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedURL, "There was a problem with login");
     }
@@ -31,7 +34,7 @@ public class LoginTest extends BaseTest {
     public void loginTestWithoutLogin() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(driver);
-        loginPage.login("", "secret_sauce");
+        loginPage.login("", password);
         String errorUsernameMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
         String expectedUsernameErrorMessage = "Epic sadface: Username is required";
         Assert.assertEquals(errorUsernameMessage, expectedUsernameErrorMessage, "Error message is not correct");
@@ -41,7 +44,7 @@ public class LoginTest extends BaseTest {
     public void loginTestWithoutPassword() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(driver);
-        loginPage.login("standard_user", "");
+        loginPage.login(username, "");
         String errorPasswordMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
         String expectedPasswordErrorMessage = "Epic sadface: Password is required";
         Assert.assertEquals(errorPasswordMessage, expectedPasswordErrorMessage, "Error message is not correct");
@@ -51,7 +54,7 @@ public class LoginTest extends BaseTest {
     public void loginTestLockedUser() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(driver);
-        loginPage.login("locked_out_user", "secret_sauce");
+        loginPage.login("locked_out_user", password);
         String lockedAccountMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
         String expectedLockedErrorMessage = "Epic sadface: Sorry, this user has been locked out.";
         Assert.assertEquals(lockedAccountMessage, expectedLockedErrorMessage, "Error message is not correct");
