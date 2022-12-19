@@ -6,12 +6,14 @@ import org.testng.asserts.SoftAssert;
 
 public class ProductTest extends BaseTest {
 
+    String username = "standard_user";
+    String password = "secret_sauce";
+
     @Test
     public void areElementsVisible() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
         WebElement image = driver.findElement(By.cssSelector(".inventory_details_img"));
         WebElement title = driver.findElement(By.cssSelector("[class*='inventory_details_name']"));
@@ -31,11 +33,11 @@ public class ProductTest extends BaseTest {
     @Test
     public void addToCart() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        productPage = new ProductPage();
+        productPage.addToCart(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
         utils = new Utils();
@@ -44,9 +46,8 @@ public class ProductTest extends BaseTest {
     @Test
     public void isRemoveButtonVisible() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         String removeButton = driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
@@ -57,23 +58,24 @@ public class ProductTest extends BaseTest {
     @Test
     public void backToListingButton() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        driver.findElement(By.id("back-to-products")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
+        listingPage = new ListingPage();
+        listingPage.moveToProductPageOfFirstProduct(driver);
+        productPage = new ProductPage();
+        productPage.back(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
     @Test
     public void removeProdAddedOnListing() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id='add-to-cart-sauce-labs-backpack']")).click();
         driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='Sauce Labs Backpack']")).click();
-        driver.findElement(By.cssSelector("[id*='remove-']")).click();
+        productPage = new ProductPage();
+        productPage.removeProduct(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
     }

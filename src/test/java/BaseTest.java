@@ -10,6 +10,11 @@ public class BaseTest {
     WebDriver driver;
     WebDriverWait wait;
     Utils utils;
+    LoginPage loginPage;
+    ListingPage listingPage;
+    CartPage cartPage;
+
+    ProductPage productPage;
 
     @BeforeTest
     public void setup(){

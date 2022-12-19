@@ -8,14 +8,18 @@ import java.util.List;
 
 public class CartTest extends BaseTest {
 
+    String username = "standard_user";
+    String password = "secret_sauce";
+
     @Test
     public void checkProductsInCart(){
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
-        driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
+        listingPage = new ListingPage();
+        listingPage.addToCartFirstProduct(driver);
+        cartPage = new CartPage();
+        cartPage.checkCart(driver);
         WebElement title = driver.findElement(By.cssSelector(".inventory_item_name"));
         WebElement description = driver.findElement(By.cssSelector(".inventory_item_desc"));
         WebElement price = driver.findElement(By.cssSelector(".inventory_item_price"));
@@ -30,12 +34,12 @@ public class CartTest extends BaseTest {
     @Test
     public void continueShoppingButton() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
-        driver.findElement(By.cssSelector(".shopping_cart_link")).click();
-        driver.findElement(By.id("continue-shopping")).click();
+        loginPage = new LoginPage();
+        loginPage.login(driver, username, password);
+        listingPage = new ListingPage();
+        listingPage.addToCartFirstProduct(driver);
+        cartPage = new CartPage();
+        cartPage.checkCart(driver).continueShopping(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
