@@ -1,18 +1,19 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import java.util.List;
 
+@Listeners(ListenerTest.class)
 public class CartTest extends BaseTest {
 
     String username = "standard_user";
     String password = "secret_sauce";
 
     @Test
-    public void checkProductsInCart(){
+    public void checkProductsInCart() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
@@ -31,6 +32,7 @@ public class CartTest extends BaseTest {
         softAssert.assertTrue(quantity.isDisplayed());
         softAssert.assertAll();
     }
+
     @Test
     public void continueShoppingButton() {
         driver.get("https://www.saucedemo.com/");
@@ -43,6 +45,7 @@ public class CartTest extends BaseTest {
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
+
     @Test
     public void removeProductInCart() {
         driver.get("https://www.saucedemo.com/");
@@ -52,12 +55,13 @@ public class CartTest extends BaseTest {
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
-        for (int i=1;i<=removeButtons.size(); i++){
+        for (int i = 1; i <= removeButtons.size(); i++) {
             driver.findElement(By.cssSelector("[id*='remove-']")).click();
         }
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
     }
+
     @Test
     public void checkoutButton() {
         driver.get("https://www.saucedemo.com/");
@@ -69,6 +73,15 @@ public class CartTest extends BaseTest {
         driver.findElement(By.id("checkout")).click();
         String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+
+
     }
 
+
+
+
 }
+
+
+
+

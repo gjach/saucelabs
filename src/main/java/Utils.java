@@ -1,7 +1,8 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class Utils extends BasePage{
@@ -13,4 +14,8 @@ public class Utils extends BasePage{
             driver.findElement(By.cssSelector("[id*='remove-']")).click();
         }
     }
+    public void takeScreenshot() throws IOException {
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshot, new File("C:\\screenshots\\test.jpg"));
+        }
 }
