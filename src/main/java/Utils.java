@@ -14,8 +14,4 @@ public class Utils extends BasePage{
             driver.findElement(By.cssSelector("[id*='remove-']")).click();
         }
     }
-    public void takeScreenshot() throws IOException {
-            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenshot, new File("C:\\screenshots\\test.jpg"));
-        }
 }

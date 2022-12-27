@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import java.util.List;
 
-@Listeners(ListenerTest.class)
+//@Listeners(ListenerTest.class)
 public class CartTest extends BaseTest {
 
     String username = "standard_user";
