@@ -1,3 +1,5 @@
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -9,16 +11,18 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import com.aventstack.extentreports.ExtentTest;
+
+
+
 
 public class BaseTest {
+
     WebDriver driver;
     WebDriverWait wait;
     Utils utils;
@@ -26,6 +30,8 @@ public class BaseTest {
     ListingPage listingPage;
     CartPage cartPage;
     ProductPage productPage;
+    static ExtentReports extent;
+    ExtentHtmlReporter htmlReporter;
 
     @BeforeMethod
     public void setup(ITestContext context) {
@@ -36,6 +42,10 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        htmlReporter = new ExtentHtmlReporter("extent.html");
+        htmlReporter.setAppendExisting(true);
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
     }
 
     @AfterMethod
@@ -47,12 +57,14 @@ public class BaseTest {
             try {
                 TakesScreenshot screenshot = (TakesScreenshot) driver;
                 File src = screenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(src, new File("C:\\screenshots\\" + result.getName() + "_" + formatter.format(d) + ".png"));
-        } catch (IOException e) {
+                FileUtils.copyFile(src, new File("C:\\screenshots\\" + result.getName() + "_" + formatter.format(d) + ".png"));
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+        extent.flush();
         driver.quit();
     }
+
 }
 

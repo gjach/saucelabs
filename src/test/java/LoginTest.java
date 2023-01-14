@@ -1,3 +1,4 @@
+import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest() {
+        ExtentTest test = extent.createTest("MyFirstTest", "Sample description");
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
@@ -20,6 +22,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestWithoutData() {
+        ExtentTest test = extent.createTest("MySecondTest", "Sample description.");
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, "", "");

@@ -1,13 +1,13 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import java.util.List;
 
-//@Listeners(ListenerTest.class)
+
 public class CartTest extends BaseTest {
+
 
     String username = "standard_user";
     String password = "secret_sauce";
