@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 public class LoginTest extends BaseTest {
@@ -12,7 +11,6 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest() {
-        ExtentTest test = extent.createTest("MyFirstTest", "Sample description");
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
@@ -22,7 +20,6 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestWithoutData() {
-        ExtentTest test = extent.createTest("MySecondTest", "Sample description.");
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, "", "");
@@ -46,7 +43,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         loginPage.login(driver, username, "");
         String errorPasswordMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
-        String expectedPasswordErrorMessage = "Epic sadface: Password is required";
+        String expectedPasswordErrorMessage = "Epic sadface: Password is required.";
         Assert.assertEquals(errorPasswordMessage, expectedPasswordErrorMessage, "Error message is not correct");
     }
 
@@ -56,7 +53,8 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         loginPage.login(driver, "locked_out_user", password);
         String lockedAccountMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
-        String expectedLockedErrorMessage = "Epic sadface: Sorry, this user has been locked out.";
+        String expectedLockedErrorMessage = "Epic sadface: Sorry, this user has been locked out";
         Assert.assertEquals(lockedAccountMessage, expectedLockedErrorMessage, "Error message is not correct");
     }
+
 }

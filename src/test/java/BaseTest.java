@@ -1,24 +1,15 @@
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import java.io.File;
-import java.io.IOException;
+import org.testng.annotations.*;
+import java.lang.reflect.Method;
 import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import com.aventstack.extentreports.ExtentTest;
-
-
 
 
 public class BaseTest {
@@ -32,39 +23,44 @@ public class BaseTest {
     ProductPage productPage;
     static ExtentReports extent;
     ExtentHtmlReporter htmlReporter;
+    ExtentTest logger;
 
-    @BeforeMethod
-    public void setup(ITestContext context) {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        context.setAttribute("WebDriver", driver);
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    @BeforeSuite
+    public void reportSetup() {
         htmlReporter = new ExtentHtmlReporter("extent.html");
-        htmlReporter.setAppendExisting(true);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
 
+    @BeforeMethod
+    public void setup(Method m) {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        logger = extent.createTest(m.getName());
+    }
+
+
     @AfterMethod
 
-    public void screenShot(ITestResult result) {
-        LocalDateTime d = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");
-        if (ITestResult.FAILURE == result.getStatus()) {
-            try {
-                TakesScreenshot screenshot = (TakesScreenshot) driver;
-                File src = screenshot.getScreenshotAs(OutputType.FILE);
-                FileUtils.copyFile(src, new File("C:\\screenshots\\" + result.getName() + "_" + formatter.format(d) + ".png"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+    public void getResult(ITestResult result) {
+        if(result.getStatus() == ITestResult.FAILURE) {
+            logger.log(Status.FAIL, result.getThrowable());
+        }
+        else if(result.getStatus() == ITestResult.SUCCESS) {
+            logger.log(Status.PASS, result.getTestName());
+        }
+        else {
+            logger.log(Status.SKIP, result.getTestName());
         }
         extent.flush();
         driver.quit();
     }
 
 }
+
 
