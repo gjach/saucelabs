@@ -14,8 +14,6 @@ public class CartTest extends BaseTest {
 
     @Test
     public void checkProductsInCart() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password)
                 .addToCartFirstProduct(driver)
                 .checkCart(driver);
@@ -33,8 +31,6 @@ public class CartTest extends BaseTest {
 
     @Test
     public void continueShoppingButton() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password)
                 .addToCartFirstProduct(driver)
                 .checkCart(driver)
@@ -45,12 +41,10 @@ public class CartTest extends BaseTest {
 
     @Test
     public void removeProductInCart() {
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
-        driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+        loginPage
+                .login(driver, username, password)
+                .addToCartFirstProduct(driver)
+                .checkCart(driver);
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
         for (int i = 1; i <= removeButtons.size(); i++) {
             driver.findElement(By.cssSelector("[id*='remove-']")).click();
@@ -61,10 +55,7 @@ public class CartTest extends BaseTest {
 
     @Test
     public void checkoutButton() {
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();

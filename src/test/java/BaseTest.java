@@ -17,13 +17,16 @@ public class BaseTest {
     WebDriver driver;
     WebDriverWait wait;
     Utils utils;
-    LoginPage loginPage;
-    ListingPage listingPage;
-    CartPage cartPage;
-    ProductPage productPage;
+    LoginPage loginPage = new LoginPage();
+    ListingPage listingPage = new ListingPage(driver);
+
+    CartPage cartPage = new CartPage(driver);
+    ProductPage productPage = new ProductPage(driver);
     static ExtentReports extent;
     ExtentHtmlReporter htmlReporter;
     ExtentTest logger;
+    String username = "standard_user";
+    String password = "secret_sauce";
 
     @BeforeSuite
     public void reportSetup() {
@@ -40,6 +43,7 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.saucedemo.com/");
 
         logger = extent.createTest(m.getName());
     }

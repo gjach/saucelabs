@@ -11,8 +11,6 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void areElementsVisible() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
         WebElement image = driver.findElement(By.cssSelector(".inventory_details_img"));
@@ -32,8 +30,6 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void addToCart() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
         productPage = new ProductPage(driver);
@@ -45,8 +41,6 @@ public class ProductTest extends BaseTest {
     }
     @Test
     public void isRemoveButtonVisible() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
@@ -57,8 +51,6 @@ public class ProductTest extends BaseTest {
     }
     @Test
     public void backToListingButton() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password);
         listingPage = new ListingPage(driver);
         listingPage.moveToProductPageOfFirstProduct(driver);
@@ -69,8 +61,6 @@ public class ProductTest extends BaseTest {
     }
     @Test
     public void removeProdAddedOnListing() {
-        driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage();
         loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id='add-to-cart-sauce-labs-backpack']")).click();
         driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='Sauce Labs Backpack']")).click();

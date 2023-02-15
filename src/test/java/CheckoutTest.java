@@ -12,10 +12,7 @@ public class CheckoutTest extends BaseTest{
 
     @Test
     public void allEmptyFields (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
@@ -27,10 +24,7 @@ public class CheckoutTest extends BaseTest{
     }
     @Test
     public void instertOnlyName (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
@@ -44,10 +38,7 @@ public class CheckoutTest extends BaseTest{
     }
     @Test
     public void instertOnlySurname (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
@@ -61,10 +52,7 @@ public class CheckoutTest extends BaseTest{
     }
     @Test
     public void instertOnlyPostalCode (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
@@ -78,10 +66,7 @@ public class CheckoutTest extends BaseTest{
     }
     @Test
     public void instertAllWithoutPostalCode (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
@@ -96,10 +81,7 @@ public class CheckoutTest extends BaseTest{
     }
     @Test
     public void instertAllWithoutSurname (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
@@ -114,10 +96,7 @@ public class CheckoutTest extends BaseTest{
     }
     @Test
     public void instertAllWithoutName (){
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
