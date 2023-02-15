@@ -16,11 +16,9 @@ public class CartTest extends BaseTest {
     public void checkProductsInCart() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
-        loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
-        listingPage.addToCartFirstProduct(driver);
-        cartPage = new CartPage();
-        cartPage.checkCart(driver);
+        loginPage.login(driver, username, password)
+                .addToCartFirstProduct(driver)
+                .checkCart(driver);
         WebElement title = driver.findElement(By.cssSelector(".inventory_item_name"));
         WebElement description = driver.findElement(By.cssSelector(".inventory_item_desc"));
         WebElement price = driver.findElement(By.cssSelector(".inventory_item_price"));
@@ -37,11 +35,10 @@ public class CartTest extends BaseTest {
     public void continueShoppingButton() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
-        loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
-        listingPage.addToCartFirstProduct(driver);
-        cartPage = new CartPage();
-        cartPage.checkCart(driver).continueShopping(driver);
+        loginPage.login(driver, username, password)
+                .addToCartFirstProduct(driver)
+                .checkCart(driver)
+                .continueShopping(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }

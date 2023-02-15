@@ -1,4 +1,3 @@
-import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -43,7 +42,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         loginPage.login(driver, username, "");
         String errorPasswordMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
-        String expectedPasswordErrorMessage = "Epic sadface: Password is required.";
+        String expectedPasswordErrorMessage = "Epic sadface: Password is required";
         Assert.assertEquals(errorPasswordMessage, expectedPasswordErrorMessage, "Error message is not correct");
     }
 
@@ -53,7 +52,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         loginPage.login(driver, "locked_out_user", password);
         String lockedAccountMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
-        String expectedLockedErrorMessage = "Epic sadface: Sorry, this user has been locked out";
+        String expectedLockedErrorMessage = "Epic sadface: Sorry, this user has been locked out.";
         Assert.assertEquals(lockedAccountMessage, expectedLockedErrorMessage, "Error message is not correct");
     }
 

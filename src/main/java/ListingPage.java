@@ -6,20 +6,26 @@ public class ListingPage extends BasePage {
 
     By sortButtonLocator = By.cssSelector("[class='product_sort_container']");
 
-        public void sortBy (WebDriver driver, By sortLocator){
+    public ListingPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void sortBy (WebDriver driver, By sortLocator){
             driver.findElement(sortButtonLocator).click();
             driver.findElement(sortLocator).click();
         }
 
-        public void addToCartFirstProduct (WebDriver driver){
+        public CartPage addToCartFirstProduct (WebDriver driver){
             driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
+            return new CartPage(driver);
         }
 
         public void removeFromCartFirstProduct (WebDriver driver){
             driver.findElement(By.cssSelector("[id*='remove']")).click();
         }
 
-        public void moveToProductPageOfFirstProduct (WebDriver driver){
+        public ProductPage moveToProductPageOfFirstProduct (WebDriver driver){
             driver.findElement(By.cssSelector("[id*='_img_link']")).click();
+            return new ProductPage(driver);
         }
     }

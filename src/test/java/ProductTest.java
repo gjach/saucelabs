@@ -36,7 +36,7 @@ public class ProductTest extends BaseTest {
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        productPage = new ProductPage();
+        productPage = new ProductPage(driver);
         productPage.addToCart(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
@@ -60,9 +60,9 @@ public class ProductTest extends BaseTest {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         listingPage.moveToProductPageOfFirstProduct(driver);
-        productPage = new ProductPage();
+        productPage = new ProductPage(driver);
         productPage.back(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
@@ -74,7 +74,7 @@ public class ProductTest extends BaseTest {
         loginPage.login(driver, username, password);
         driver.findElement(By.cssSelector("[id='add-to-cart-sauce-labs-backpack']")).click();
         driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='Sauce Labs Backpack']")).click();
-        productPage = new ProductPage();
+        productPage = new ProductPage(driver);
         productPage.removeProduct(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");

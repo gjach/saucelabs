@@ -1,11 +1,16 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CartPage extends BasePage{
 
+    public CartPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public CartPage checkCart(WebDriver driver){
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
-    return new CartPage();
+    return new CartPage(driver);
     }
 
     public void continueShopping(WebDriver driver){

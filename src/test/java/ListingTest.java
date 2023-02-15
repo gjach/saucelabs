@@ -29,7 +29,7 @@ public class ListingTest extends BaseTest {
         for (WebElement p : beforeProductsFromAToZ) {
             beforeProductsFromAToZList.add(p.getText());
         }
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         listingPage.sortBy(driver, sortAtoZLocator);
         List<WebElement> afterProductsFromAToZ = driver.findElements(productTitlesLocator);
         List<String> afterProductsFromAToZList = new ArrayList<>();
@@ -50,7 +50,7 @@ public class ListingTest extends BaseTest {
         for (WebElement p : beforeProductsFromZToA) {
             beforeProductsFromZToAList.add(p.getText());
         }
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         listingPage.sortBy(driver, sortZtoALocator);
         List<WebElement> afterProductsFromZToA = driver.findElements(productTitlesLocator);
         List<String> afterProductsFromZToAList = new ArrayList<>();
@@ -71,7 +71,7 @@ public class ListingTest extends BaseTest {
         for (WebElement p : beforeSortingLowToHigh) {
             beforeSortingLowToHighList.add(Double.valueOf(p.getText().replace("$", "")));
         }
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         listingPage.sortBy(driver, sortLowToHighPriceLocator);
 
         List<WebElement> afterSortingLowToHigh = driver.findElements(productPricesLocator);
@@ -94,7 +94,7 @@ public class ListingTest extends BaseTest {
         for (WebElement p : beforeSortingHighToLow) {
             beforeSortingHighToLowList.add(Double.valueOf(p.getText().replace("$", "")));
         }
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         listingPage.sortBy(driver, sortHighToLowPriceLocator);
 
         List<WebElement> afterSortingHighToLow = driver.findElements(productPricesLocator);
@@ -111,9 +111,8 @@ public class ListingTest extends BaseTest {
     public void addToCartFromListing() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
-        loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
-        listingPage.addToCartFirstProduct(driver);
+        loginPage.login(driver, username, password)
+                .addToCartFirstProduct(driver);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
         utils = new Utils();
@@ -124,9 +123,8 @@ public class ListingTest extends BaseTest {
     public void removeFromCartFromListing() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
-        loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
-        listingPage.addToCartFirstProduct(driver);
+        loginPage.login(driver, username, password)
+                        .addToCartFirstProduct(driver);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
@@ -158,7 +156,7 @@ public class ListingTest extends BaseTest {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
 
             listingPage.addToCartFirstProduct(driver);
@@ -172,7 +170,7 @@ public class ListingTest extends BaseTest {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
         loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
+        listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
             listingPage.addToCartFirstProduct(driver);
         }
@@ -189,12 +187,13 @@ public class ListingTest extends BaseTest {
     public void removeProductAddedFromProdPage() {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage();
-        loginPage.login(driver, username, password);
-        listingPage = new ListingPage();
-        listingPage.moveToProductPageOfFirstProduct(driver);
-        productPage = new ProductPage();
-        productPage.addToCart(driver).back(driver);
-        listingPage.removeFromCartFirstProduct(driver);
+        loginPage
+                .login(driver, username, password)
+                .moveToProductPageOfFirstProduct(driver)
+                .addToCart(driver)
+                .back(driver);
+        listingPage = new ListingPage(driver);
+               listingPage.removeFromCartFirstProduct(driver);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "");
     }
