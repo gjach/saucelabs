@@ -26,7 +26,7 @@ public class CheckoutOverviewTest extends BaseTest {
         driver.findElement(By.id("continue")).click();
         List<WebElement> productsInCart = driver.findElements(By.cssSelector(".inventory_item_name"));
         Assert.assertEquals(randomNum, productsInCart.size());
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
 
@@ -53,7 +53,7 @@ public class CheckoutOverviewTest extends BaseTest {
         String itemTotalInformation = driver.findElement(By.cssSelector(".summary_subtotal_label")).getText();
         double totalPrice = Double.valueOf(itemTotalInformation.replace("Item total: $", ""));
         Assert.assertEquals(totalPrice, sum);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
 
@@ -85,7 +85,7 @@ public class CheckoutOverviewTest extends BaseTest {
         double totalPrice = Double.valueOf(totalPriceInformation.replace("Total: $", ""));
         double expectedTotalPrice = Math.round((productsPrice + taxValue) * 100.0) / 100.0;
         Assert.assertEquals(totalPrice, expectedTotalPrice);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
 

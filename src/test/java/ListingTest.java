@@ -98,17 +98,17 @@ public class ListingTest extends BaseTest {
     @Test
     public void addToCartFromListing() {
         loginPage.login(driver, username, password)
-                .addToCartFirstProduct(driver);
+                .addToCart(driver, productId);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
 
     @Test
     public void removeFromCartFromListing() {
         loginPage.login(driver, username, password)
-                        .addToCartFirstProduct(driver);
+                        .addToCart(driver, productId);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
@@ -139,7 +139,7 @@ public class ListingTest extends BaseTest {
         listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
 
-            listingPage.addToCartFirstProduct(driver);
+            listingPage.addToCartRandomProducts(driver);
         }
         int itemsInCart = Integer.parseInt(driver.findElement(cartLocator).getText());
         Assert.assertEquals(itemsInCart, 6);
@@ -150,14 +150,14 @@ public class ListingTest extends BaseTest {
         loginPage.login(driver, username, password);
         listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
-            listingPage.addToCartFirstProduct(driver);
+            listingPage.addToCartRandomProducts(driver);
         }
         for (int i = 0; i < 5; i++) {
             listingPage.removeFromCartFirstProduct(driver);
         }
         int itemsInCart = Integer.parseInt(driver.findElement(cartLocator).getText());
         Assert.assertEquals(itemsInCart, 1);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
 

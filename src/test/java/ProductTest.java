@@ -11,8 +11,9 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void areElementsVisible() {
-        loginPage.login(driver, username, password);
-        driver.findElement(By.cssSelector("[id*='_img_link']")).click();
+        loginPage
+                .login(driver, username, password)
+                .moveToProductPageOfFirstProduct(driver);
         WebElement image = driver.findElement(By.cssSelector(".inventory_details_img"));
         WebElement title = driver.findElement(By.cssSelector("[class*='inventory_details_name']"));
         WebElement description = driver.findElement(By.cssSelector("[class*='inventory_details_desc']"));
@@ -30,42 +31,40 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void addToCart() {
-        loginPage.login(driver, username, password);
-        driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        productPage = new ProductPage(driver);
-        productPage.addToCart(driver);
+        loginPage
+                .login(driver, username, password)
+                .moveToProductPageOfFirstProduct(driver)
+                .addToCart(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
-        utils = new Utils();
         utils.cleanCart(driver);
     }
     @Test
     public void isRemoveButtonVisible() {
-        loginPage.login(driver, username, password);
-        driver.findElement(By.cssSelector("[id*='_img_link']")).click();
-        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
+        loginPage
+                .login(driver, username, password)
+                .moveToProductPageOfFirstProduct(driver)
+                .addToCart(driver);
         String removeButton = driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
         Assert.assertEquals(removeButton, "REMOVE");
-        utils = new Utils();
         utils.cleanCart(driver);
     }
     @Test
     public void backToListingButton() {
-        loginPage.login(driver, username, password);
-        listingPage = new ListingPage(driver);
-        listingPage.moveToProductPageOfFirstProduct(driver);
-        productPage = new ProductPage(driver);
-        productPage.back(driver);
+        loginPage
+                .login(driver, username, password)
+                .moveToProductPageOfFirstProduct(driver)
+                .back(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
     @Test
     public void removeProdAddedOnListing() {
-        loginPage.login(driver, username, password);
-        driver.findElement(By.cssSelector("[id='add-to-cart-sauce-labs-backpack']")).click();
-        driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='Sauce Labs Backpack']")).click();
-        productPage = new ProductPage(driver);
-        productPage.removeProduct(driver);
+        loginPage
+                .login(driver, username, password)
+                .addToCart(driver, productId)
+                .navigateToProduct(driver, productName)
+                .removeProduct(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
     }

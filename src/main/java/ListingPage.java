@@ -15,9 +15,9 @@ public class ListingPage extends BasePage {
             driver.findElement(sortLocator).click();
         }
 
-        public CartPage addToCartFirstProduct (WebDriver driver){
-            driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
-            return new CartPage(driver);
+        public ListingPage addToCart (WebDriver driver, String productId){
+            driver.findElement(By.cssSelector("[id*='" + productId + "']")).click();
+            return new ListingPage(driver);
         }
 
         public void removeFromCartFirstProduct (WebDriver driver){
@@ -28,4 +28,14 @@ public class ListingPage extends BasePage {
             driver.findElement(By.cssSelector("[id*='_img_link']")).click();
             return new ProductPage(driver);
         }
+
+    public ListingPage addToCartRandomProducts(WebDriver driver) {
+        driver.findElement(By.cssSelector("[id*='add-to-cart']")).click();
+        return new ListingPage(driver);
     }
+
+    public ProductPage navigateToProduct(WebDriver driver, String productName) {
+        driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='"+ productName +"']")).click();
+        return new ProductPage(driver);
+    }
+}

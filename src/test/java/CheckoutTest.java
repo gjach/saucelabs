@@ -19,7 +19,7 @@ public class CheckoutTest extends BaseTest{
         driver.findElement(By.id("continue")).click();
         List<WebElement> errorMessages = driver.findElements(By.cssSelector("[class*='input_error']"));
         Assert.assertEquals(errorMessages.size(), 3);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     @Test
@@ -33,7 +33,7 @@ public class CheckoutTest extends BaseTest{
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: Last Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     @Test
@@ -47,7 +47,7 @@ public class CheckoutTest extends BaseTest{
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: First Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     @Test
@@ -61,7 +61,7 @@ public class CheckoutTest extends BaseTest{
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: First Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     @Test
@@ -76,7 +76,7 @@ public class CheckoutTest extends BaseTest{
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: Postal Code is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     @Test
@@ -91,7 +91,7 @@ public class CheckoutTest extends BaseTest{
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: Last Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     @Test
@@ -106,7 +106,7 @@ public class CheckoutTest extends BaseTest{
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: First Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
-        utils = new Utils();
+        utils = new Utils(driver);
         utils.cleanCart(driver);
     }
     }

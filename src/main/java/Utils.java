@@ -3,6 +3,10 @@ import java.util.List;
 
 public class Utils extends BasePage{
 
+    public Utils(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void cleanCart(WebDriver driver){
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));

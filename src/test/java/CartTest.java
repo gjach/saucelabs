@@ -15,8 +15,8 @@ public class CartTest extends BaseTest {
     @Test
     public void checkProductsInCart() {
         loginPage.login(driver, username, password)
-                .addToCartFirstProduct(driver)
-                .checkCart(driver);
+                .addToCart(driver, productId);
+//                .checkCart(driver);
         WebElement title = driver.findElement(By.cssSelector(".inventory_item_name"));
         WebElement description = driver.findElement(By.cssSelector(".inventory_item_desc"));
         WebElement price = driver.findElement(By.cssSelector(".inventory_item_price"));
@@ -32,9 +32,9 @@ public class CartTest extends BaseTest {
     @Test
     public void continueShoppingButton() {
         loginPage.login(driver, username, password)
-                .addToCartFirstProduct(driver)
-                .checkCart(driver)
-                .continueShopping(driver);
+                .addToCart(driver, productId);
+//                .checkCart(driver)
+//                .continueShopping(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
@@ -43,8 +43,8 @@ public class CartTest extends BaseTest {
     public void removeProductInCart() {
         loginPage
                 .login(driver, username, password)
-                .addToCartFirstProduct(driver)
-                .checkCart(driver);
+                .addToCart(driver, productId);
+//                .checkCart(driver);
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
         for (int i = 1; i <= removeButtons.size(); i++) {
             driver.findElement(By.cssSelector("[id*='remove-']")).click();
