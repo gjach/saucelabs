@@ -9,14 +9,13 @@ import java.util.List;
 public class CartTest extends BaseTest {
 
 
-    String username = "standard_user";
-    String password = "secret_sauce";
-
     @Test
     public void checkProductsInCart() {
-        loginPage.login(driver, username, password)
+        loginPage
+                .login(driver, username, password)
                 .addToCart(driver, productId);
-//                .checkCart(driver);
+        cartPage
+                .checkCart(driver);
         WebElement title = driver.findElement(By.cssSelector(".inventory_item_name"));
         WebElement description = driver.findElement(By.cssSelector(".inventory_item_desc"));
         WebElement price = driver.findElement(By.cssSelector(".inventory_item_price"));
@@ -31,10 +30,12 @@ public class CartTest extends BaseTest {
 
     @Test
     public void continueShoppingButton() {
-        loginPage.login(driver, username, password)
+        loginPage
+                .login(driver, username, password)
                 .addToCart(driver, productId);
-//                .checkCart(driver)
-//                .continueShopping(driver);
+        cartPage
+                .checkCart(driver)
+                .continueShopping(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
@@ -44,10 +45,11 @@ public class CartTest extends BaseTest {
         loginPage
                 .login(driver, username, password)
                 .addToCart(driver, productId);
-//                .checkCart(driver);
+        cartPage
+                .checkCart(driver);
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
         for (int i = 1; i <= removeButtons.size(); i++) {
-            driver.findElement(By.cssSelector("[id*='remove-']")).click();
+            cartPage.removeProduct(driver);
         }
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
@@ -55,10 +57,12 @@ public class CartTest extends BaseTest {
 
     @Test
     public void checkoutButton() {
-        loginPage.login(driver, username, password);
-        driver.findElement(By.cssSelector("[id*='add-to-cart-']")).click();
-        driver.findElement(By.cssSelector(".shopping_cart_link")).click();
-        driver.findElement(By.id("checkout")).click();
+        loginPage
+                .login(driver, username, password)
+                .addToCart(driver, productId);
+        cartPage
+                .checkCart(driver)
+                .goToCheckOut(driver);
         String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
 

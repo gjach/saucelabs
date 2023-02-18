@@ -18,10 +18,9 @@ public class BaseTest {
     WebDriverWait wait;
     LoginPage loginPage = new LoginPage();
     ListingPage listingPage = new ListingPage(driver);
-
     CartPage cartPage = new CartPage(driver);
     ProductPage productPage = new ProductPage(driver);
-
+    CheckOutPage checkOutPage = new CheckOutPage(driver);
     Utils utils = new Utils(driver);
     static ExtentReports extent;
     ExtentHtmlReporter htmlReporter;
@@ -29,8 +28,10 @@ public class BaseTest {
     String username = "standard_user";
     String password = "secret_sauce";
     String productId = "add-to-cart-sauce-labs-backpack";
-
     String productName = "Sauce Labs Backpack";
+    String name = "John";
+    String surname = "Wick";
+    String postalCode = "800552";
 
     @BeforeSuite
     public void reportSetup() {

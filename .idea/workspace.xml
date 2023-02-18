@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4714008-77ac-4e13-80b3-311e54af24aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CheckOutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CheckoutOverviewPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extent.html" beforeDir="false" afterPath="$PROJECT_DIR$/extent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CheckoutOverviewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckoutOverviewTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckoutTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CartPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CartTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CartTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CheckoutTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CheckoutTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +55,17 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ProductTest">
-    <configuration name="ListingTest.updatingDecreasingCartIcon" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration name="CheckoutOverviewTest.checkCancelButton" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListingTest" />
-      <option name="METHOD_NAME" value="updatingDecreasingCartIcon" />
+      <option name="MAIN_CLASS_NAME" value="CheckoutOverviewTest" />
+      <option name="METHOD_NAME" value="checkCancelButton" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -65,11 +73,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListingTest.updatingIncreasingCartIcon" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutOverviewTest.checkFinishButton" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListingTest" />
-      <option name="METHOD_NAME" value="updatingIncreasingCartIcon" />
+      <option name="MAIN_CLASS_NAME" value="CheckoutOverviewTest" />
+      <option name="METHOD_NAME" value="checkFinishButton" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -77,22 +85,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutOverviewTest.summaryTaxAndProducts" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="CheckoutOverviewTest" />
+      <option name="METHOD_NAME" value="summaryTaxAndProducts" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest.removeProdAddedOnListing" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutOverviewTest.totalPrice" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductTest" />
-      <option name="METHOD_NAME" value="removeProdAddedOnListing" />
+      <option name="MAIN_CLASS_NAME" value="CheckoutOverviewTest" />
+      <option name="METHOD_NAME" value="totalPrice" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProductTest" />
-        <item itemvalue="TestNG.ProductTest.removeProdAddedOnListing" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.ListingTest.updatingDecreasingCartIcon" />
-        <item itemvalue="TestNG.ListingTest.updatingIncreasingCartIcon" />
+        <item itemvalue="TestNG.CheckoutOverviewTest.checkFinishButton" />
+        <item itemvalue="TestNG.CheckoutOverviewTest.checkCancelButton" />
+        <item itemvalue="TestNG.CheckoutOverviewTest.summaryTaxAndProducts" />
+        <item itemvalue="TestNG.CheckoutOverviewTest.totalPrice" />
       </list>
     </recent_temporary>
   </component>

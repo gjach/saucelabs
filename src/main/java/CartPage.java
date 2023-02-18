@@ -17,6 +17,10 @@ public class CartPage extends BasePage{
         driver.findElement(By.id("continue-shopping")).click();
     }
     public void removeProduct(WebDriver driver){
-        driver.findElement(By.cssSelector(".shopping_cart_link")).click();
+        driver.findElement(By.cssSelector("[id*=remove")).click();
+    }
+    public CheckOutPage goToCheckOut(WebDriver driver){
+        driver.findElement(By.id("checkout")).click();
+        return new CheckOutPage(driver);
     }
 }
