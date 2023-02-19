@@ -7,7 +7,7 @@ public class ListingPage extends BasePage {
     By sortButtonLocator = By.cssSelector("[class='product_sort_container']");
 
     public ListingPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void sortBy (WebDriver driver, By sortLocator){

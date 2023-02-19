@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 public class CheckOutPage extends BasePage{
 
     public CheckOutPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public CheckoutOverviewPage goToCheckoutOverview(WebDriver driver){

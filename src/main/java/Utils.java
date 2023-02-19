@@ -4,7 +4,7 @@ import java.util.List;
 public class Utils extends BasePage{
 
     public Utils(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void cleanCart(WebDriver driver){

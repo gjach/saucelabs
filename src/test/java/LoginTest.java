@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
@@ -9,6 +10,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest() {
+
         loginPage.login(driver, username, password);
         String expectedURL = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedURL, "There was a problem with login");

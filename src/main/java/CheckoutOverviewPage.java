@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 public class CheckoutOverviewPage extends BasePage {
 
     public CheckoutOverviewPage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
     public void cancel(WebDriver driver) {

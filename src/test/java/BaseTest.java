@@ -16,7 +16,7 @@ public class BaseTest {
 
     WebDriver driver;
     WebDriverWait wait;
-    LoginPage loginPage = new LoginPage();
+    LoginPage loginPage = new LoginPage(driver);
     ListingPage listingPage = new ListingPage(driver);
     CartPage cartPage = new CartPage(driver);
     ProductPage productPage = new ProductPage(driver);

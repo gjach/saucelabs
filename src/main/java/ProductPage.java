@@ -5,7 +5,7 @@ public class ProductPage extends BasePage{
 
 
     public ProductPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public ProductPage addToCart(WebDriver driver){
