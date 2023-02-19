@@ -12,7 +12,7 @@ public class CartTest extends BaseTest {
     @Test
     public void checkProductsInCart() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver);
@@ -31,7 +31,7 @@ public class CartTest extends BaseTest {
     @Test
     public void continueShoppingButton() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -43,7 +43,7 @@ public class CartTest extends BaseTest {
     @Test
     public void removeProductInCart() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver);
@@ -58,7 +58,7 @@ public class CartTest extends BaseTest {
     @Test
     public void checkoutButton() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)

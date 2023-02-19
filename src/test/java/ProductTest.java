@@ -12,7 +12,7 @@ public class ProductTest extends BaseTest {
     @Test
     public void areElementsVisible() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .moveToProductPageOfFirstProduct(driver);
         WebElement image = driver.findElement(By.cssSelector(".inventory_details_img"));
         WebElement title = driver.findElement(By.cssSelector("[class*='inventory_details_name']"));
@@ -32,7 +32,7 @@ public class ProductTest extends BaseTest {
     @Test
     public void addToCart() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .moveToProductPageOfFirstProduct(driver)
                 .addToCart(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
@@ -42,7 +42,7 @@ public class ProductTest extends BaseTest {
     @Test
     public void isRemoveButtonVisible() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .moveToProductPageOfFirstProduct(driver)
                 .addToCart(driver);
         String removeButton = driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
@@ -52,7 +52,7 @@ public class ProductTest extends BaseTest {
     @Test
     public void backToListingButton() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .moveToProductPageOfFirstProduct(driver)
                 .back(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
@@ -61,7 +61,7 @@ public class ProductTest extends BaseTest {
     @Test
     public void removeProdAddedOnListing() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId)
                 .navigateToProduct(driver, productName)
                 .removeProduct(driver);

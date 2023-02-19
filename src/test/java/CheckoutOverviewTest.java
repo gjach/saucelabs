@@ -15,7 +15,7 @@ public class CheckoutOverviewTest extends BaseTest {
     @Test
     public void checkQuantityOfProducts() {
         loginPage
-                .login(driver, username, password);
+                .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
                     .addToCartRandomProducts(driver);
@@ -34,7 +34,7 @@ public class CheckoutOverviewTest extends BaseTest {
     @Test
     public void totalPrice() {
         loginPage
-                .login(driver, username, password);
+                .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
                     .addToCartRandomProducts(driver);
@@ -63,7 +63,7 @@ public class CheckoutOverviewTest extends BaseTest {
     @Test
     public void summaryTaxAndProducts() {
         loginPage
-                .login(driver, username, password);
+                .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
                     .addToCartRandomProducts(driver);
@@ -97,7 +97,7 @@ public class CheckoutOverviewTest extends BaseTest {
     @Test
     public void checkCancelButton() {
         loginPage
-                .login(driver, username, password);
+                .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
                     .addToCartRandomProducts(driver);
@@ -115,7 +115,7 @@ public class CheckoutOverviewTest extends BaseTest {
 
     @Test
     public void checkFinishButton() {
-        loginPage.login(driver, username, password);
+        loginPage.login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
                     .addToCartRandomProducts(driver);

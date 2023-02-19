@@ -14,7 +14,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void allEmptyFields() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -30,7 +30,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertOnlyName() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -48,7 +48,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertOnlySurname() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -66,7 +66,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertOnlyPostalCode() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -84,7 +84,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertAllWithoutPostalCode() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -102,7 +102,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertAllWithoutSurname() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -120,7 +120,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertAllWithoutName() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)
@@ -138,7 +138,7 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void instertAllData() {
         loginPage
-                .login(driver, username, password)
+                .login(username, password)
                 .addToCart(driver, productId);
         cartPage
                 .checkCart(driver)

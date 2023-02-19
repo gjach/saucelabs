@@ -19,7 +19,6 @@ public class BaseTest {
     LoginPage loginPage = new LoginPage(driver);
     ListingPage listingPage = new ListingPage(driver);
     CartPage cartPage = new CartPage(driver);
-    ProductPage productPage = new ProductPage(driver);
     CheckOutPage checkOutPage = new CheckOutPage(driver);
     Utils utils = new Utils(driver);
     static ExtentReports extent;
@@ -49,6 +48,7 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
+        loginPage = new LoginPage(driver);
 
         logger = extent.createTest(m.getName());
     }

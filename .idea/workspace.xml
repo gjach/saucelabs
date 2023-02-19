@@ -8,16 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extent.html" beforeDir="false" afterPath="$PROJECT_DIR$/extent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckOutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckoutOverviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckoutOverviewPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CheckoutOverviewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckoutOverviewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest.loginTest">
+  <component name="RunManager" selected="TestNG.LoginTest">
     <configuration name="CheckoutOverviewTest.checkCancelButton" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
@@ -85,12 +83,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckoutOverviewTest.summaryTaxAndProducts" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CheckoutOverviewTest" />
-      <option name="METHOD_NAME" value="summaryTaxAndProducts" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -121,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.LoginTest.loginTest" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.CheckoutOverviewTest.checkFinishButton" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.CheckoutOverviewTest.checkCancelButton" />
-        <item itemvalue="TestNG.CheckoutOverviewTest.summaryTaxAndProducts" />
       </list>
     </recent_temporary>
   </component>
