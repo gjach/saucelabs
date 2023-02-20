@@ -9,6 +9,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password);
         String expectedURL = "https://www.saucedemo.com/inventory.html";
@@ -17,6 +18,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestWithoutData() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login("", "");
         List<WebElement> errorMessages = driver.findElements(By.xpath(".//input[@class='input_error form_input error']"));
@@ -25,6 +27,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestWithoutLogin() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login("", password);
         String errorUsernameMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
@@ -34,6 +37,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestWithoutPassword() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, "");
         String errorPasswordMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
@@ -43,6 +47,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestLockedUser() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login("locked_out_user", password);
         String lockedAccountMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();

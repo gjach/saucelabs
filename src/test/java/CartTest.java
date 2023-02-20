@@ -11,9 +11,11 @@ public class CartTest extends BaseTest {
 
     @Test
     public void checkProductsInCart() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(driver, productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
         WebElement title = driver.findElement(By.cssSelector(".inventory_item_name"));
@@ -30,9 +32,11 @@ public class CartTest extends BaseTest {
 
     @Test
     public void continueShoppingButton() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(driver, productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .continueShopping(driver);
@@ -42,14 +46,17 @@ public class CartTest extends BaseTest {
 
     @Test
     public void removeProductInCart() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(driver, productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
         for (int i = 1; i <= removeButtons.size(); i++) {
-            cartPage.removeProduct(driver);
+            cartPage.
+                    removeProduct(driver);
         }
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
@@ -57,9 +64,11 @@ public class CartTest extends BaseTest {
 
     @Test
     public void checkoutButton() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(driver, productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut(driver);

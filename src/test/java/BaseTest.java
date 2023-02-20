@@ -16,10 +16,10 @@ public class BaseTest {
 
     WebDriver driver;
     WebDriverWait wait;
-    LoginPage loginPage = new LoginPage(driver);
-    ListingPage listingPage = new ListingPage(driver);
-    CartPage cartPage = new CartPage(driver);
-    CheckOutPage checkOutPage = new CheckOutPage(driver);
+    LoginPage loginPage;
+    ListingPage listingPage;
+    CartPage cartPage;
+    CheckOutPage checkOutPage;
     Utils utils = new Utils(driver);
     static ExtentReports extent;
     ExtentHtmlReporter htmlReporter;
@@ -48,7 +48,6 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
-        loginPage = new LoginPage(driver);
 
         logger = extent.createTest(m.getName());
     }

@@ -9,6 +9,9 @@ import java.util.List;
 
 public class ListingTest extends BaseTest {
 
+    LoginPage loginPage;
+    ListingPage listingPage;
+
     By productTitlesLocator = By.cssSelector(".inventory_item_name");
     By sortAtoZLocator = By.cssSelector("option[value='az']");
     By sortZtoALocator = By.cssSelector("option[value='za']");
@@ -16,18 +19,20 @@ public class ListingTest extends BaseTest {
     By sortLowToHighPriceLocator = By.cssSelector("option[value='lohi']");
     By sortHighToLowPriceLocator = By.cssSelector("option[value='hilo']");
     By cartLocator = By.cssSelector(".shopping_cart_link");
-    String username = "standard_user";
-    String password = "secret_sauce";
 
     @Test
     public void sortingAToZ() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         List<WebElement> beforeProductsFromAToZ = driver.findElements(productTitlesLocator);
         List<String> beforeProductsFromAToZList = new ArrayList<>();
         for (WebElement p : beforeProductsFromAToZ) {
             beforeProductsFromAToZList.add(p.getText());
         }
-        listingPage.sortBy(driver, sortAtoZLocator);
+        ListingPage listingPage = new ListingPage(driver);
+        listingPage
+                .sortBy(driver, sortAtoZLocator);
         List<WebElement> afterProductsFromAToZ = driver.findElements(productTitlesLocator);
         List<String> afterProductsFromAToZList = new ArrayList<>();
         for (WebElement p : afterProductsFromAToZ) {
@@ -39,13 +44,17 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void sortingZToA() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         List<WebElement> beforeProductsFromZToA = driver.findElements(productTitlesLocator);
         List<String> beforeProductsFromZToAList = new ArrayList<>();
         for (WebElement p : beforeProductsFromZToA) {
             beforeProductsFromZToAList.add(p.getText());
         }
-        listingPage.sortBy(driver, sortZtoALocator);
+        ListingPage listingPage = new ListingPage(driver);
+        listingPage
+                .sortBy(driver, sortZtoALocator);
         List<WebElement> afterProductsFromZToA = driver.findElements(productTitlesLocator);
         List<String> afterProductsFromZToAList = new ArrayList<>();
         for (WebElement p : afterProductsFromZToA) {
@@ -57,13 +66,17 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void sortingByPriceLowToHigh() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         List<WebElement> beforeSortingLowToHigh = driver.findElements(productPricesLocator);
         List<Double> beforeSortingLowToHighList = new ArrayList<>();
         for (WebElement p : beforeSortingLowToHigh) {
             beforeSortingLowToHighList.add(Double.valueOf(p.getText().replace("$", "")));
         }
-        listingPage.sortBy(driver, sortLowToHighPriceLocator);
+        ListingPage listingPage = new ListingPage(driver);
+        listingPage
+                .sortBy(driver, sortLowToHighPriceLocator);
 
         List<WebElement> afterSortingLowToHigh = driver.findElements(productPricesLocator);
         List<Double> afterSortingLowToHighList = new ArrayList<>();
@@ -77,13 +90,17 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void sortingByPriceHighToLow() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         List<WebElement> beforeSortingHighToLow = driver.findElements(productPricesLocator);
         List<Double> beforeSortingHighToLowList = new ArrayList<>();
         for (WebElement p : beforeSortingHighToLow) {
             beforeSortingHighToLowList.add(Double.valueOf(p.getText().replace("$", "")));
         }
-        listingPage.sortBy(driver, sortHighToLowPriceLocator);
+        ListingPage listingPage = new ListingPage(driver);
+        listingPage
+                .sortBy(driver, sortHighToLowPriceLocator);
 
         List<WebElement> afterSortingHighToLow = driver.findElements(productPricesLocator);
         List<Double> afterSortingHighToLowList = new ArrayList<>();
@@ -97,7 +114,9 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void addToCartFromListing() {
-        loginPage.login(username, password)
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password)
                 .addToCart(driver, productId);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
@@ -107,8 +126,10 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void removeFromCartFromListing() {
-        loginPage.login(username, password)
-                        .addToCart(driver, productId);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password)
+                .addToCart(driver, productId);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
@@ -118,7 +139,9 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void areElementsVisible() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         List<WebElement> images = driver.findElements(By.cssSelector("[id*='_img_link']"));
         List<WebElement> titles = driver.findElements(By.cssSelector(".inventory_item_name"));
         List<WebElement> prices = driver.findElements(By.cssSelector(".inventory_item_price"));
@@ -135,7 +158,9 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void updatingIncreasingCartIcon() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
 
@@ -147,7 +172,9 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void updatingDecreasingCartIcon() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
             listingPage.addToCartRandomProducts(driver);
@@ -163,12 +190,13 @@ public class ListingTest extends BaseTest {
 
     @Test
     public void removeProductAddedFromProdPage() {
-
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .moveToProductPageOfFirstProduct(driver)
                 .addToCart(driver)
                 .back(driver);
+        listingPage = new ListingPage(driver);
         listingPage
                 .removeFromCartFirstProduct(driver);
         String itemsInCart = driver.findElement(cartLocator).getText();

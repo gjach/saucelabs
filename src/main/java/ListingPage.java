@@ -1,17 +1,22 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class ListingPage extends BasePage {
 
-    By sortButtonLocator = By.cssSelector("[class='product_sort_container']");
+
+    @FindBy (css = "[class='product_sort_container']")
+    WebElement sortBtn;
+//    By sortButtonLocator = By.cssSelector("[class='product_sort_container']");
 
     public ListingPage(WebDriver driver) {
         super(driver);
     }
 
     public void sortBy (WebDriver driver, By sortLocator){
-            driver.findElement(sortButtonLocator).click();
+        sortBtn.click();
+//            driver.findElement(sortButtonLocator).click();
             driver.findElement(sortLocator).click();
         }
 
