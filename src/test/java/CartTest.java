@@ -14,7 +14,7 @@ public class CartTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId);
+                .addToCart(productId);
         cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
@@ -35,7 +35,7 @@ public class CartTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId);
+                .addToCart(productId);
         cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
@@ -49,7 +49,7 @@ public class CartTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId);
+                .addToCart(productId);
         cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
@@ -67,7 +67,7 @@ public class CartTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId);
+                .addToCart(productId);
         cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)

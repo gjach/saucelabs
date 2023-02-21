@@ -18,7 +18,7 @@ public class CheckoutOverviewTest extends BaseTest {
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
-                    .addToCartRandomProducts(driver);
+                    .addToCartRandomProducts();
         }
         cartPage
                 .checkCart(driver)
@@ -37,7 +37,7 @@ public class CheckoutOverviewTest extends BaseTest {
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
-                    .addToCartRandomProducts(driver);
+                    .addToCartRandomProducts();
         }
         cartPage
                 .checkCart(driver);
@@ -66,7 +66,7 @@ public class CheckoutOverviewTest extends BaseTest {
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
-                    .addToCartRandomProducts(driver);
+                    .addToCartRandomProducts();
         }
         cartPage
                 .checkCart(driver);
@@ -100,7 +100,7 @@ public class CheckoutOverviewTest extends BaseTest {
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
-                    .addToCartRandomProducts(driver);
+                    .addToCartRandomProducts();
         }
         cartPage
                 .checkCart(driver);
@@ -118,7 +118,7 @@ public class CheckoutOverviewTest extends BaseTest {
         loginPage.login(username, password);
         for (int i = 0; i < randomNum; i++) {
             listingPage
-                    .addToCartRandomProducts(driver);
+                    .addToCartRandomProducts();
         }
         cartPage
                 .checkCart(driver);

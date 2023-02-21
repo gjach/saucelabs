@@ -13,7 +13,7 @@ public class ProductTest extends BaseTest {
     public void areElementsVisible() {
         loginPage
                 .login(username, password)
-                .moveToProductPageOfFirstProduct(driver);
+                .moveToProductPageOfFirstProduct();
         WebElement image = driver.findElement(By.cssSelector(".inventory_details_img"));
         WebElement title = driver.findElement(By.cssSelector("[class*='inventory_details_name']"));
         WebElement description = driver.findElement(By.cssSelector("[class*='inventory_details_desc']"));
@@ -33,7 +33,7 @@ public class ProductTest extends BaseTest {
     public void addToCart() {
         loginPage
                 .login(username, password)
-                .moveToProductPageOfFirstProduct(driver)
+                .moveToProductPageOfFirstProduct()
                 .addToCart(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "1");
@@ -43,7 +43,7 @@ public class ProductTest extends BaseTest {
     public void isRemoveButtonVisible() {
         loginPage
                 .login(username, password)
-                .moveToProductPageOfFirstProduct(driver)
+                .moveToProductPageOfFirstProduct()
                 .addToCart(driver);
         String removeButton = driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
         Assert.assertEquals(removeButton, "REMOVE");
@@ -53,7 +53,7 @@ public class ProductTest extends BaseTest {
     public void backToListingButton() {
         loginPage
                 .login(username, password)
-                .moveToProductPageOfFirstProduct(driver)
+                .moveToProductPageOfFirstProduct()
                 .back(driver);
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
@@ -62,8 +62,8 @@ public class ProductTest extends BaseTest {
     public void removeProdAddedOnListing() {
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId)
-                .navigateToProduct(driver, productName)
+                .addToCart(productId)
+                .navigateToProduct(productName)
                 .removeProduct(driver);
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");

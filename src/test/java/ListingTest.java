@@ -117,7 +117,7 @@ public class ListingTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId);
+                .addToCart(productId);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
         utils = new Utils(driver);
@@ -129,7 +129,7 @@ public class ListingTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .addToCart(driver, productId);
+                .addToCart(productId);
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "1");
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
@@ -164,7 +164,7 @@ public class ListingTest extends BaseTest {
         listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
 
-            listingPage.addToCartRandomProducts(driver);
+            listingPage.addToCartRandomProducts();
         }
         int itemsInCart = Integer.parseInt(driver.findElement(cartLocator).getText());
         Assert.assertEquals(itemsInCart, 6);
@@ -177,10 +177,10 @@ public class ListingTest extends BaseTest {
                 .login(username, password);
         listingPage = new ListingPage(driver);
         for (int i = 0; i < 6; i++) {
-            listingPage.addToCartRandomProducts(driver);
+            listingPage.addToCartRandomProducts();
         }
         for (int i = 0; i < 5; i++) {
-            listingPage.removeFromCartFirstProduct(driver);
+            listingPage.removeFromCartFirstProduct();
         }
         int itemsInCart = Integer.parseInt(driver.findElement(cartLocator).getText());
         Assert.assertEquals(itemsInCart, 1);
@@ -193,12 +193,12 @@ public class ListingTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
-                .moveToProductPageOfFirstProduct(driver)
+                .moveToProductPageOfFirstProduct()
                 .addToCart(driver)
                 .back(driver);
         listingPage = new ListingPage(driver);
         listingPage
-                .removeFromCartFirstProduct(driver);
+                .removeFromCartFirstProduct();
         String itemsInCart = driver.findElement(cartLocator).getText();
         Assert.assertEquals(itemsInCart, "");
     }
