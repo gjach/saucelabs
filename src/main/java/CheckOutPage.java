@@ -1,5 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class CheckOutPage extends BasePage{
 
@@ -7,15 +9,25 @@ public class CheckOutPage extends BasePage{
         super(driver);
     }
 
-    public CheckoutOverviewPage goToCheckoutOverview(WebDriver driver){
-        driver.findElement(By.id("continue")).click();
+    @FindBy (id = "continue")
+    WebElement continueBtn;
+    @FindBy (id = "first-name")
+    WebElement firstNameInput;
+    @FindBy (id = "last-name")
+    WebElement lastNameInput;
+    @FindBy (id = "postal-code")
+    WebElement postalCodeInput;
+
+
+    public CheckoutOverviewPage goToCheckoutOverview(){
+        continueBtn.click();
         return new CheckoutOverviewPage(driver);
     }
 
-    public CheckOutPage enterData(WebDriver driver, String name, String surname, String postalCode) {
-        driver.findElement(By.id("first-name")).sendKeys(name);
-        driver.findElement(By.id("last-name")).sendKeys(surname);
-        driver.findElement(By.id("postal-code")).sendKeys(postalCode);
+    public CheckOutPage enterData(String name, String surname, String postalCode) {
+        firstNameInput.sendKeys(name);
+        lastNameInput.sendKeys(surname);
+        postalCodeInput.sendKeys(postalCode);
     return new CheckOutPage(driver);
     }
 }

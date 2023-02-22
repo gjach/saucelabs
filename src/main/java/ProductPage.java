@@ -1,7 +1,19 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends BasePage{
+
+    @FindBy (css = "[id*=add-to-cart]")
+    WebElement addToCartBtn;
+    @FindBy (id = "back-to-products")
+    WebElement backBtn;
+    @FindBy (css = "[id*='remove-']")
+    WebElement removeBtn;
+
+    @FindBy (css = ".inventory_details_img")
+    WebElement image;
 
 
     public ProductPage(WebDriver driver) {
@@ -9,15 +21,16 @@ public class ProductPage extends BasePage{
     }
 
     public ProductPage addToCart(WebDriver driver){
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        addToCartBtn.click();
         return new ProductPage(driver);
     }
+
     public ProductPage back (WebDriver driver){
-        driver.findElement(By.id("back-to-products")).click();
+        backBtn.click();
     return new ProductPage(driver);
     }
 
     public void removeProduct(WebDriver driver){
-        driver.findElement(By.cssSelector("[id*='remove-']")).click();
+        removeBtn.click();
     }
 }

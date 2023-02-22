@@ -32,7 +32,7 @@ public class ListingTest extends BaseTest {
         }
         ListingPage listingPage = new ListingPage(driver);
         listingPage
-                .sortBy(driver, sortAtoZLocator);
+                .sortBy(sortAtoZLocator);
         List<WebElement> afterProductsFromAToZ = driver.findElements(productTitlesLocator);
         List<String> afterProductsFromAToZList = new ArrayList<>();
         for (WebElement p : afterProductsFromAToZ) {
@@ -54,7 +54,7 @@ public class ListingTest extends BaseTest {
         }
         ListingPage listingPage = new ListingPage(driver);
         listingPage
-                .sortBy(driver, sortZtoALocator);
+                .sortBy(sortZtoALocator);
         List<WebElement> afterProductsFromZToA = driver.findElements(productTitlesLocator);
         List<String> afterProductsFromZToAList = new ArrayList<>();
         for (WebElement p : afterProductsFromZToA) {
@@ -76,7 +76,7 @@ public class ListingTest extends BaseTest {
         }
         ListingPage listingPage = new ListingPage(driver);
         listingPage
-                .sortBy(driver, sortLowToHighPriceLocator);
+                .sortBy(sortLowToHighPriceLocator);
 
         List<WebElement> afterSortingLowToHigh = driver.findElements(productPricesLocator);
         List<Double> afterSortingLowToHighList = new ArrayList<>();
@@ -100,7 +100,7 @@ public class ListingTest extends BaseTest {
         }
         ListingPage listingPage = new ListingPage(driver);
         listingPage
-                .sortBy(driver, sortHighToLowPriceLocator);
+                .sortBy(sortHighToLowPriceLocator);
 
         List<WebElement> afterSortingHighToLow = driver.findElements(productPricesLocator);
         List<Double> afterSortingHighToLowList = new ArrayList<>();

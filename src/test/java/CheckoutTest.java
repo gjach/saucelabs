@@ -18,9 +18,9 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .goToCheckoutOverview(driver);
+                .goToCheckoutOverview();
         List<WebElement> errorMessages = driver.findElements(By.cssSelector("[class*='input_error']"));
         Assert.assertEquals(errorMessages.size(), 3);
         utils = new Utils(driver);
@@ -34,10 +34,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, name, "", "")
-                .goToCheckoutOverview(driver);
+                .enterData(name, "", "")
+                .goToCheckoutOverview();
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: Last Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
@@ -52,10 +52,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, "", surname, "")
-                .goToCheckoutOverview(driver);
+                .enterData("", surname, "")
+                .goToCheckoutOverview();
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: First Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
@@ -70,10 +70,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, "", "", postalCode)
-                .goToCheckoutOverview(driver);
+                .enterData("", "", postalCode)
+                .goToCheckoutOverview();
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: First Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
@@ -88,10 +88,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, name, surname, "")
-                .goToCheckoutOverview(driver);
+                .enterData(name, surname, "")
+                .goToCheckoutOverview();
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: Postal Code is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
@@ -106,10 +106,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, name, "", postalCode)
-                .goToCheckoutOverview(driver);
+                .enterData(name, "", postalCode)
+                .goToCheckoutOverview();
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: Last Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
@@ -124,10 +124,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, "", surname, postalCode)
-                .goToCheckoutOverview(driver);
+                .enterData("", surname, postalCode)
+                .goToCheckoutOverview();
         WebElement errorMessageFrame = driver.findElement(By.cssSelector("[class*=error-message-container]"));
         String expectedErrorMessage = "Error: First Name is required";
         Assert.assertEquals(errorMessageFrame.getText(), expectedErrorMessage);
@@ -142,10 +142,10 @@ public class CheckoutTest extends BaseTest {
                 .addToCart(productId);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         checkOutPage
-                .enterData(driver, name, surname, postalCode)
-                .goToCheckoutOverview(driver);
+                .enterData(name, surname, postalCode)
+                .goToCheckoutOverview();
         String expectedUrl = "https://www.saucedemo.com/checkout-step-two.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl, "URL is not correct");
 

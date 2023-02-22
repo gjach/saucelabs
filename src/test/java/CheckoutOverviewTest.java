@@ -22,9 +22,9 @@ public class CheckoutOverviewTest extends BaseTest {
         }
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver)
-                .enterData(driver, name, surname, postalCode)
-                .goToCheckoutOverview(driver);
+                .goToCheckOut()
+                .enterData(name, surname, postalCode)
+                .goToCheckoutOverview();
         List<WebElement> productsInCart = driver.findElements(By.cssSelector(".inventory_item_name"));
         Assert.assertEquals(randomNum, productsInCart.size());
         utils = new Utils(driver);
@@ -50,9 +50,9 @@ public class CheckoutOverviewTest extends BaseTest {
         for (int i = 0; i < prices.size(); i++)
             sum += prices.get(i);
         cartPage
-                .goToCheckOut(driver)
-                .enterData(driver, name, surname, postalCode)
-                .goToCheckoutOverview(driver);
+                .goToCheckOut()
+                .enterData(name, surname, postalCode)
+                .goToCheckoutOverview();
         String itemTotalInformation = driver.findElement(By.cssSelector(".summary_subtotal_label")).getText();
         double totalPrice = Double.valueOf(itemTotalInformation.replace("Item total: $", ""));
         Assert.assertEquals(totalPrice, sum);
@@ -79,9 +79,9 @@ public class CheckoutOverviewTest extends BaseTest {
         for (int i = 0; i < prices.size(); i++)
             sum += prices.get(i);
         cartPage
-                .goToCheckOut(driver)
-                .enterData(driver, name, surname, postalCode)
-                .goToCheckoutOverview(driver);
+                .goToCheckOut()
+                .enterData(name, surname, postalCode)
+                .goToCheckoutOverview();
         String productsPriceInformation = driver.findElement(By.cssSelector(".summary_subtotal_label")).getText();
         double productsPrice = Double.valueOf(productsPriceInformation.replace("Item total: $", ""));
         String taxInformation = driver.findElement(By.cssSelector(".summary_tax_label")).getText();
@@ -105,9 +105,9 @@ public class CheckoutOverviewTest extends BaseTest {
         cartPage
                 .checkCart(driver);
         cartPage
-                .goToCheckOut(driver)
-                .enterData(driver, name, surname, postalCode)
-                .goToCheckoutOverview(driver)
+                .goToCheckOut()
+                .enterData(name, surname, postalCode)
+                .goToCheckoutOverview()
                 .cancel(driver);
         String expectedURL = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedURL, "There was a problem with login");
@@ -123,9 +123,9 @@ public class CheckoutOverviewTest extends BaseTest {
         cartPage
                 .checkCart(driver);
         cartPage
-                .goToCheckOut(driver)
-                .enterData(driver, name, surname, postalCode)
-                .goToCheckoutOverview(driver)
+                .goToCheckOut()
+                .enterData(name, surname, postalCode)
+                .goToCheckoutOverview()
                 .finish(driver);
         String confirmationOfOrder = driver.findElement(By.cssSelector(".complete-header")).getText();
         String expectedConfirmationOfOrder = "THANK YOU FOR YOUR ORDER";

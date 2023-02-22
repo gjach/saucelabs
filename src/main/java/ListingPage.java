@@ -19,12 +19,11 @@ public class ListingPage extends BasePage {
     WebElement addToCartRandomProd;
 
 
-
     public ListingPage(WebDriver driver) {
         super(driver);
     }
 
-    public void sortBy (WebDriver driver, By sortLocator){
+    public void sortBy (By sortLocator){
         sortBtn.click();
             driver.findElement(sortLocator).click();
         }

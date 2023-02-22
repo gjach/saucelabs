@@ -39,7 +39,7 @@ public class CartTest extends BaseTest {
         cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
-                .continueShopping(driver);
+                .continueShopping();
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
@@ -56,7 +56,7 @@ public class CartTest extends BaseTest {
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("[id*='remove-']"));
         for (int i = 1; i <= removeButtons.size(); i++) {
             cartPage.
-                    removeProduct(driver);
+                    removeProduct();
         }
         String itemsInCart = driver.findElement(By.cssSelector(".shopping_cart_link")).getText();
         Assert.assertEquals(itemsInCart, "");
@@ -71,7 +71,7 @@ public class CartTest extends BaseTest {
         cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
-                .goToCheckOut(driver);
+                .goToCheckOut();
         String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
 

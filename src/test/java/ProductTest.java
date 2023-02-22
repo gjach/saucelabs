@@ -6,11 +6,9 @@ import org.testng.asserts.SoftAssert;
 
 public class ProductTest extends BaseTest {
 
-    String username = "standard_user";
-    String password = "secret_sauce";
-
     @Test
     public void areElementsVisible() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .moveToProductPageOfFirstProduct();
@@ -31,6 +29,7 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void addToCart() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .moveToProductPageOfFirstProduct()
@@ -41,6 +40,7 @@ public class ProductTest extends BaseTest {
     }
     @Test
     public void isRemoveButtonVisible() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .moveToProductPageOfFirstProduct()
@@ -51,6 +51,7 @@ public class ProductTest extends BaseTest {
     }
     @Test
     public void backToListingButton() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .moveToProductPageOfFirstProduct()
@@ -60,6 +61,7 @@ public class ProductTest extends BaseTest {
     }
     @Test
     public void removeProdAddedOnListing() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId)
