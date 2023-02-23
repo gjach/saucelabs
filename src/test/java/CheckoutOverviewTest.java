@@ -14,12 +14,15 @@ public class CheckoutOverviewTest extends BaseTest {
 
     @Test
     public void checkQuantityOfProducts() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
+            ListingPage listingPage = new ListingPage(driver);
             listingPage
                     .addToCartRandomProducts();
         }
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut()
@@ -33,12 +36,15 @@ public class CheckoutOverviewTest extends BaseTest {
 
     @Test
     public void totalPrice() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
+            ListingPage listingPage = new ListingPage(driver);
             listingPage
                     .addToCartRandomProducts();
         }
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
         List<WebElement> pricesLocators = driver.findElements(By.cssSelector(".inventory_item_price"));
@@ -62,12 +68,15 @@ public class CheckoutOverviewTest extends BaseTest {
 
     @Test
     public void summaryTaxAndProducts() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
+            ListingPage listingPage = new ListingPage(driver);
             listingPage
                     .addToCartRandomProducts();
         }
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
         List<WebElement> pricesLocators = driver.findElements(By.cssSelector(".inventory_item_price"));
@@ -78,6 +87,7 @@ public class CheckoutOverviewTest extends BaseTest {
         double sum = 0;
         for (int i = 0; i < prices.size(); i++)
             sum += prices.get(i);
+        cartPage = new CartPage(driver);
         cartPage
                 .goToCheckOut()
                 .enterData(name, surname, postalCode)
@@ -96,37 +106,44 @@ public class CheckoutOverviewTest extends BaseTest {
 
     @Test
     public void checkCancelButton() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password);
         for (int i = 0; i < randomNum; i++) {
+            ListingPage listingPage = new ListingPage(driver);
             listingPage
                     .addToCartRandomProducts();
         }
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
         cartPage
                 .goToCheckOut()
                 .enterData(name, surname, postalCode)
                 .goToCheckoutOverview()
-                .cancel(driver);
+                .cancel();
         String expectedURL = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(driver.getCurrentUrl(), expectedURL, "There was a problem with login");
     }
 
     @Test
     public void checkFinishButton() {
-        loginPage.login(username, password);
+        loginPage = new LoginPage(driver);
+        loginPage
+                .login(username, password);
         for (int i = 0; i < randomNum; i++) {
+            ListingPage listingPage = new ListingPage(driver);
             listingPage
                     .addToCartRandomProducts();
         }
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver);
         cartPage
                 .goToCheckOut()
                 .enterData(name, surname, postalCode)
                 .goToCheckoutOverview()
-                .finish(driver);
+                .finish();
         String confirmationOfOrder = driver.findElement(By.cssSelector(".complete-header")).getText();
         String expectedConfirmationOfOrder = "THANK YOU FOR YOUR ORDER";
         Assert.assertEquals(confirmationOfOrder, expectedConfirmationOfOrder);

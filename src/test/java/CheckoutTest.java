@@ -11,14 +11,18 @@ public class CheckoutTest extends BaseTest {
     Utils utils;
 
 
+
     @Test
     public void allEmptyFields() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .goToCheckoutOverview();
         List<WebElement> errorMessages = driver.findElements(By.cssSelector("[class*='input_error']"));
@@ -29,12 +33,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertOnlyName() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData(name, "", "")
                 .goToCheckoutOverview();
@@ -47,12 +54,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertOnlySurname() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData("", surname, "")
                 .goToCheckoutOverview();
@@ -65,12 +75,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertOnlyPostalCode() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData("", "", postalCode)
                 .goToCheckoutOverview();
@@ -83,12 +96,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertAllWithoutPostalCode() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData(name, surname, "")
                 .goToCheckoutOverview();
@@ -101,12 +117,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertAllWithoutSurname() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData(name, "", postalCode)
                 .goToCheckoutOverview();
@@ -119,12 +138,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertAllWithoutName() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData("", surname, postalCode)
                 .goToCheckoutOverview();
@@ -137,12 +159,15 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void instertAllData() {
+        loginPage = new LoginPage(driver);
         loginPage
                 .login(username, password)
                 .addToCart(productId);
+        cartPage = new CartPage(driver);
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
+        checkOutPage = new CheckOutPage(driver);
         checkOutPage
                 .enterData(name, surname, postalCode)
                 .goToCheckoutOverview();

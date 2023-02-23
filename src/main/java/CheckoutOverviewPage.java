@@ -7,11 +7,11 @@ public class CheckoutOverviewPage extends BasePage {
         super(driver);
     }
 
-    public void cancel(WebDriver driver) {
+    public void cancel() {
         driver.findElement(By.id("cancel")).click();
     }
 
-    public void finish(WebDriver driver) {
+    public void finish() {
         driver.findElement(By.id("finish")).click();
     }
 }

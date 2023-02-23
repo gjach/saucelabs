@@ -9,8 +9,6 @@ import java.util.List;
 
 public class ListingTest extends BaseTest {
 
-    LoginPage loginPage;
-    ListingPage listingPage;
 
     By productTitlesLocator = By.cssSelector(".inventory_item_name");
     By sortAtoZLocator = By.cssSelector("option[value='az']");
