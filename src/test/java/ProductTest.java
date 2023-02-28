@@ -46,7 +46,7 @@ public class ProductTest extends BaseTest {
                 .moveToProductPageOfFirstProduct()
                 .addToCart(driver);
         String removeButton = driver.findElement(By.id("remove-sauce-labs-backpack")).getText();
-        Assert.assertEquals(removeButton, "REMOVE");
+        Assert.assertEquals(removeButton, "Remove");
         utils.cleanCart(driver);
     }
     @Test

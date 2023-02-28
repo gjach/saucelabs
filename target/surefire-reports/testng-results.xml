@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="6" total="43" passed="37" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-26T21:05:37 CET" name="Surefire suite" finished-at="2023-02-26T21:07:16 CET" duration-ms="99283">
+    <groups>
+    </groups>
+    <test started-at="2023-02-26T21:05:37 CET" name="Surefire test" finished-at="2023-02-26T21:07:16 CET" duration-ms="99283">
+      <class name="ProductTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:05 CET" name="setup" finished-at="2023-02-26T21:07:07 CET" duration-ms="1880" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ProductTest.addToCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addToCart()[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:07 CET" name="addToCart" finished-at="2023-02-26T21:07:08 CET" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:08 CET" name="getResult" finished-at="2023-02-26T21:07:08 CET" duration-ms="240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addToCart status=SUCCESS method=ProductTest.addToCart()[pri:0, instance:ProductTest@6a192cfe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:08 CET" name="setup" finished-at="2023-02-26T21:07:09 CET" duration-ms="1355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ProductTest.areElementsVisible()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="areElementsVisible()[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:09 CET" name="areElementsVisible" finished-at="2023-02-26T21:07:10 CET" duration-ms="558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areElementsVisible -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:10 CET" name="getResult" finished-at="2023-02-26T21:07:10 CET" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=areElementsVisible status=SUCCESS method=ProductTest.areElementsVisible()[pri:0, instance:ProductTest@6a192cfe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:10 CET" name="setup" finished-at="2023-02-26T21:07:11 CET" duration-ms="1310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ProductTest.backToListingButton()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="backToListingButton()[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:11 CET" name="backToListingButton" finished-at="2023-02-26T21:07:12 CET" duration-ms="396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToListingButton -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:12 CET" name="getResult" finished-at="2023-02-26T21:07:12 CET" duration-ms="216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=backToListingButton status=SUCCESS method=ProductTest.backToListingButton()[pri:0, instance:ProductTest@6a192cfe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:12 CET" name="setup" finished-at="2023-02-26T21:07:13 CET" duration-ms="1181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ProductTest.isRemoveButtonVisible()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="isRemoveButtonVisible()[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:13 CET" name="isRemoveButtonVisible" finished-at="2023-02-26T21:07:14 CET" duration-ms="509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isRemoveButtonVisible -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:14 CET" name="getResult" finished-at="2023-02-26T21:07:14 CET" duration-ms="217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=isRemoveButtonVisible status=SUCCESS method=ProductTest.isRemoveButtonVisible()[pri:0, instance:ProductTest@6a192cfe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:14 CET" name="setup" finished-at="2023-02-26T21:07:15 CET" duration-ms="1335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ProductTest.removeProdAddedOnListing()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="removeProdAddedOnListing()[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:15 CET" name="removeProdAddedOnListing" finished-at="2023-02-26T21:07:16 CET" duration-ms="543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProdAddedOnListing -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ProductTest@6a192cfe]" started-at="2023-02-26T21:07:16 CET" name="getResult" finished-at="2023-02-26T21:07:16 CET" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeProdAddedOnListing status=SUCCESS method=ProductTest.removeProdAddedOnListing()[pri:0, instance:ProductTest@6a192cfe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- ProductTest -->
+      <class name="CheckoutTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:01 CET" name="setup" finished-at="2023-02-26T21:06:04 CET" duration-ms="2759" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.allEmptyFields()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="allEmptyFields()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:04 CET" name="allEmptyFields" finished-at="2023-02-26T21:06:05 CET" duration-ms="713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- allEmptyFields -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:05 CET" name="getResult" finished-at="2023-02-26T21:06:05 CET" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=allEmptyFields status=SUCCESS method=CheckoutTest.allEmptyFields()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:05 CET" name="setup" finished-at="2023-02-26T21:06:07 CET" duration-ms="1316" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertAllData()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertAllData()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:07 CET" name="instertAllData" finished-at="2023-02-26T21:06:07 CET" duration-ms="894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertAllData -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:07 CET" name="getResult" finished-at="2023-02-26T21:06:08 CET" duration-ms="241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertAllData status=SUCCESS method=CheckoutTest.instertAllData()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:08 CET" name="setup" finished-at="2023-02-26T21:06:09 CET" duration-ms="1303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertAllWithoutName()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertAllWithoutName()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:09 CET" name="instertAllWithoutName" finished-at="2023-02-26T21:06:10 CET" duration-ms="955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertAllWithoutName -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:10 CET" name="getResult" finished-at="2023-02-26T21:06:10 CET" duration-ms="224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertAllWithoutName status=SUCCESS method=CheckoutTest.instertAllWithoutName()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:10 CET" name="setup" finished-at="2023-02-26T21:06:13 CET" duration-ms="3056" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertAllWithoutPostalCode()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertAllWithoutPostalCode()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:13 CET" name="instertAllWithoutPostalCode" finished-at="2023-02-26T21:06:14 CET" duration-ms="1013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertAllWithoutPostalCode -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:14 CET" name="getResult" finished-at="2023-02-26T21:06:14 CET" duration-ms="226" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertAllWithoutPostalCode status=SUCCESS method=CheckoutTest.instertAllWithoutPostalCode()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:14 CET" name="setup" finished-at="2023-02-26T21:06:16 CET" duration-ms="1378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertAllWithoutSurname()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertAllWithoutSurname()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:16 CET" name="instertAllWithoutSurname" finished-at="2023-02-26T21:06:17 CET" duration-ms="1086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertAllWithoutSurname -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:17 CET" name="getResult" finished-at="2023-02-26T21:06:17 CET" duration-ms="299" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertAllWithoutSurname status=SUCCESS method=CheckoutTest.instertAllWithoutSurname()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:17 CET" name="setup" finished-at="2023-02-26T21:06:19 CET" duration-ms="1653" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertOnlyName()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertOnlyName()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:19 CET" name="instertOnlyName" finished-at="2023-02-26T21:06:20 CET" duration-ms="799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertOnlyName -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:20 CET" name="getResult" finished-at="2023-02-26T21:06:20 CET" duration-ms="158" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertOnlyName status=SUCCESS method=CheckoutTest.instertOnlyName()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:20 CET" name="setup" finished-at="2023-02-26T21:06:21 CET" duration-ms="1173" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertOnlyPostalCode()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertOnlyPostalCode()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:21 CET" name="instertOnlyPostalCode" finished-at="2023-02-26T21:06:22 CET" duration-ms="658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertOnlyPostalCode -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:22 CET" name="getResult" finished-at="2023-02-26T21:06:22 CET" duration-ms="160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertOnlyPostalCode status=SUCCESS method=CheckoutTest.instertOnlyPostalCode()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:22 CET" name="setup" finished-at="2023-02-26T21:06:23 CET" duration-ms="1529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutTest.instertOnlySurname()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="instertOnlySurname()[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:23 CET" name="instertOnlySurname" finished-at="2023-02-26T21:06:24 CET" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instertOnlySurname -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutTest@1817d444]" started-at="2023-02-26T21:06:24 CET" name="getResult" finished-at="2023-02-26T21:06:25 CET" duration-ms="244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=instertOnlySurname status=SUCCESS method=CheckoutTest.instertOnlySurname()[pri:0, instance:CheckoutTest@1817d444] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- CheckoutTest -->
+      <class name="ListingTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:25 CET" name="setup" finished-at="2023-02-26T21:06:26 CET" duration-ms="1251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.addToCartFromListing()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addToCartFromListing()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:26 CET" name="addToCartFromListing" finished-at="2023-02-26T21:06:26 CET" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartFromListing -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:26 CET" name="getResult" finished-at="2023-02-26T21:06:27 CET" duration-ms="233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addToCartFromListing status=SUCCESS method=ListingTest.addToCartFromListing()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:27 CET" name="setup" finished-at="2023-02-26T21:06:29 CET" duration-ms="2452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.areElementsVisible()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="areElementsVisible()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:29 CET" name="areElementsVisible" finished-at="2023-02-26T21:06:29 CET" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areElementsVisible -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:29 CET" name="getResult" finished-at="2023-02-26T21:06:30 CET" duration-ms="223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=areElementsVisible status=SUCCESS method=ListingTest.areElementsVisible()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:30 CET" name="setup" finished-at="2023-02-26T21:06:31 CET" duration-ms="1861" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.removeFromCartFromListing()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="removeFromCartFromListing()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:31 CET" name="removeFromCartFromListing" finished-at="2023-02-26T21:06:32 CET" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromCartFromListing -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:32 CET" name="getResult" finished-at="2023-02-26T21:06:32 CET" duration-ms="234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeFromCartFromListing status=SUCCESS method=ListingTest.removeFromCartFromListing()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:32 CET" name="setup" finished-at="2023-02-26T21:06:34 CET" duration-ms="1794" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.removeProductAddedFromProdPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="removeProductAddedFromProdPage()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:34 CET" name="removeProductAddedFromProdPage" finished-at="2023-02-26T21:06:35 CET" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProductAddedFromProdPage -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:35 CET" name="getResult" finished-at="2023-02-26T21:06:35 CET" duration-ms="236" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeProductAddedFromProdPage status=SUCCESS method=ListingTest.removeProductAddedFromProdPage()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:35 CET" name="setup" finished-at="2023-02-26T21:06:37 CET" duration-ms="2006" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.sortingAToZ()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sortingAToZ()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:37 CET" name="sortingAToZ" finished-at="2023-02-26T21:06:37 CET" duration-ms="687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingAToZ -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:37 CET" name="getResult" finished-at="2023-02-26T21:06:38 CET" duration-ms="216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingAToZ status=SUCCESS method=ListingTest.sortingAToZ()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:38 CET" name="setup" finished-at="2023-02-26T21:06:39 CET" duration-ms="1331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.sortingByPriceHighToLow()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sortingByPriceHighToLow()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:39 CET" name="sortingByPriceHighToLow" finished-at="2023-02-26T21:06:40 CET" duration-ms="827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingByPriceHighToLow -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:40 CET" name="getResult" finished-at="2023-02-26T21:06:40 CET" duration-ms="265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingByPriceHighToLow status=SUCCESS method=ListingTest.sortingByPriceHighToLow()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:40 CET" name="setup" finished-at="2023-02-26T21:06:41 CET" duration-ms="1292" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.sortingByPriceLowToHigh()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sortingByPriceLowToHigh()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:41 CET" name="sortingByPriceLowToHigh" finished-at="2023-02-26T21:06:42 CET" duration-ms="747" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingByPriceLowToHigh -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:42 CET" name="getResult" finished-at="2023-02-26T21:06:42 CET" duration-ms="223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingByPriceLowToHigh status=SUCCESS method=ListingTest.sortingByPriceLowToHigh()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:42 CET" name="setup" finished-at="2023-02-26T21:06:47 CET" duration-ms="5077" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.sortingZToA()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sortingZToA()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:47 CET" name="sortingZToA" finished-at="2023-02-26T21:06:48 CET" duration-ms="629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingZToA -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:48 CET" name="getResult" finished-at="2023-02-26T21:06:48 CET" duration-ms="205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingZToA status=SUCCESS method=ListingTest.sortingZToA()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:48 CET" name="setup" finished-at="2023-02-26T21:06:50 CET" duration-ms="1254" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.updatingDecreasingCartIcon()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="updatingDecreasingCartIcon()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:50 CET" name="updatingDecreasingCartIcon" finished-at="2023-02-26T21:06:51 CET" duration-ms="1150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatingDecreasingCartIcon -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:51 CET" name="getResult" finished-at="2023-02-26T21:06:51 CET" duration-ms="238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updatingDecreasingCartIcon status=SUCCESS method=ListingTest.updatingDecreasingCartIcon()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:51 CET" name="setup" finished-at="2023-02-26T21:06:53 CET" duration-ms="1614" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ListingTest.updatingIncreasingCartIcon()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="updatingIncreasingCartIcon()[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:53 CET" name="updatingIncreasingCartIcon" finished-at="2023-02-26T21:06:53 CET" duration-ms="676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatingIncreasingCartIcon -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:ListingTest@188715b5]" started-at="2023-02-26T21:06:53 CET" name="getResult" finished-at="2023-02-26T21:06:53 CET" duration-ms="230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updatingIncreasingCartIcon status=SUCCESS method=ListingTest.updatingIncreasingCartIcon()[pri:0, instance:ListingTest@188715b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- ListingTest -->
+      <class name="LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:53 CET" name="setup" finished-at="2023-02-26T21:06:57 CET" duration-ms="3217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void LoginTest.loginTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:57 CET" name="loginTest" finished-at="2023-02-26T21:06:57 CET" duration-ms="343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:57 CET" name="getResult" finished-at="2023-02-26T21:06:57 CET" duration-ms="240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginTest.loginTest()[pri:0, instance:LoginTest@1ea9f6af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:57 CET" name="setup" finished-at="2023-02-26T21:06:59 CET" duration-ms="1382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void LoginTest.loginTestLockedUser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTestLockedUser()[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:59 CET" name="loginTestLockedUser" finished-at="2023-02-26T21:06:59 CET" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestLockedUser -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:59 CET" name="getResult" finished-at="2023-02-26T21:06:59 CET" duration-ms="275" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTestLockedUser status=SUCCESS method=LoginTest.loginTestLockedUser()[pri:0, instance:LoginTest@1ea9f6af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:06:59 CET" name="setup" finished-at="2023-02-26T21:07:01 CET" duration-ms="1359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void LoginTest.loginTestWithoutData()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTestWithoutData()[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:01 CET" name="loginTestWithoutData" finished-at="2023-02-26T21:07:01 CET" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithoutData -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:01 CET" name="getResult" finished-at="2023-02-26T21:07:01 CET" duration-ms="217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTestWithoutData status=SUCCESS method=LoginTest.loginTestWithoutData()[pri:0, instance:LoginTest@1ea9f6af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:01 CET" name="setup" finished-at="2023-02-26T21:07:02 CET" duration-ms="1298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void LoginTest.loginTestWithoutLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTestWithoutLogin()[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:02 CET" name="loginTestWithoutLogin" finished-at="2023-02-26T21:07:03 CET" duration-ms="268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithoutLogin -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:03 CET" name="getResult" finished-at="2023-02-26T21:07:03 CET" duration-ms="239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTestWithoutLogin status=SUCCESS method=LoginTest.loginTestWithoutLogin()[pri:0, instance:LoginTest@1ea9f6af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:03 CET" name="setup" finished-at="2023-02-26T21:07:04 CET" duration-ms="1606" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void LoginTest.loginTestWithoutPassword()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTestWithoutPassword()[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:04 CET" name="loginTestWithoutPassword" finished-at="2023-02-26T21:07:05 CET" duration-ms="263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithoutPassword -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:LoginTest@1ea9f6af]" started-at="2023-02-26T21:07:05 CET" name="getResult" finished-at="2023-02-26T21:07:05 CET" duration-ms="303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTestWithoutPassword status=SUCCESS method=LoginTest.loginTestWithoutPassword()[pri:0, instance:LoginTest@1ea9f6af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- LoginTest -->
+      <class name="CartTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:37 CET" name="setup" finished-at="2023-02-26T21:05:41 CET" duration-ms="3963" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CartTest.checkProductsInCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkProductsInCart()[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:41 CET" name="checkProductsInCart" finished-at="2023-02-26T21:05:41 CET" duration-ms="554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkProductsInCart -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:41 CET" name="getResult" finished-at="2023-02-26T21:05:42 CET" duration-ms="467" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkProductsInCart status=SUCCESS method=CartTest.checkProductsInCart()[pri:0, instance:CartTest@636be97c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:42 CET" name="setup" finished-at="2023-02-26T21:05:43 CET" duration-ms="1234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CartTest.checkoutButton()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkoutButton()[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:43 CET" name="checkoutButton" finished-at="2023-02-26T21:05:43 CET" duration-ms="435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutButton -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:43 CET" name="getResult" finished-at="2023-02-26T21:05:44 CET" duration-ms="239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkoutButton status=SUCCESS method=CartTest.checkoutButton()[pri:0, instance:CartTest@636be97c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:44 CET" name="setup" finished-at="2023-02-26T21:05:45 CET" duration-ms="1234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CartTest.continueShoppingButton()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="continueShoppingButton()[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:45 CET" name="continueShoppingButton" finished-at="2023-02-26T21:05:45 CET" duration-ms="408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueShoppingButton -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:45 CET" name="getResult" finished-at="2023-02-26T21:05:45 CET" duration-ms="174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=continueShoppingButton status=SUCCESS method=CartTest.continueShoppingButton()[pri:0, instance:CartTest@636be97c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:45 CET" name="setup" finished-at="2023-02-26T21:05:47 CET" duration-ms="1243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CartTest.removeProductInCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="removeProductInCart()[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:47 CET" name="removeProductInCart" finished-at="2023-02-26T21:05:47 CET" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProductInCart -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CartTest@636be97c]" started-at="2023-02-26T21:05:47 CET" name="getResult" finished-at="2023-02-26T21:05:47 CET" duration-ms="170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeProductInCart status=SUCCESS method=CartTest.removeProductInCart()[pri:0, instance:CartTest@636be97c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- CartTest -->
+      <class name="BaseTest">
+        <test-method is-config="true" signature="reportSetup()[pri:0, instance:BaseTest@13e39c73]" started-at="2023-02-26T21:05:36 CET" name="reportSetup" finished-at="2023-02-26T21:05:37 CET" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSetup -->
+      </class> <!-- BaseTest -->
+      <class name="CheckoutOverviewTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:47 CET" name="setup" finished-at="2023-02-26T21:05:48 CET" duration-ms="1245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutOverviewTest.checkCancelButton()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkCancelButton()[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:48 CET" name="checkCancelButton" finished-at="2023-02-26T21:05:50 CET" duration-ms="1013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkCancelButton -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:50 CET" name="getResult" finished-at="2023-02-26T21:05:50 CET" duration-ms="213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkCancelButton status=SUCCESS method=CheckoutOverviewTest.checkCancelButton()[pri:0, instance:CheckoutOverviewTest@50a638b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:50 CET" name="setup" finished-at="2023-02-26T21:05:51 CET" duration-ms="1272" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutOverviewTest.checkFinishButton()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkFinishButton()[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:51 CET" name="checkFinishButton" finished-at="2023-02-26T21:05:52 CET" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFinishButton -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:52 CET" name="getResult" finished-at="2023-02-26T21:05:52 CET" duration-ms="174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkFinishButton status=SUCCESS method=CheckoutOverviewTest.checkFinishButton()[pri:0, instance:CheckoutOverviewTest@50a638b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:52 CET" name="setup" finished-at="2023-02-26T21:05:53 CET" duration-ms="1274" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutOverviewTest.checkQuantityOfProducts()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkQuantityOfProducts()[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:53 CET" name="checkQuantityOfProducts" finished-at="2023-02-26T21:05:55 CET" duration-ms="1570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkQuantityOfProducts -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:55 CET" name="getResult" finished-at="2023-02-26T21:05:55 CET" duration-ms="253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkQuantityOfProducts status=SUCCESS method=CheckoutOverviewTest.checkQuantityOfProducts()[pri:0, instance:CheckoutOverviewTest@50a638b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:55 CET" name="setup" finished-at="2023-02-26T21:05:56 CET" duration-ms="1311" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutOverviewTest.summaryTaxAndProducts()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="summaryTaxAndProducts()[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:56 CET" name="summaryTaxAndProducts" finished-at="2023-02-26T21:05:58 CET" duration-ms="1709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- summaryTaxAndProducts -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:58 CET" name="getResult" finished-at="2023-02-26T21:05:58 CET" duration-ms="234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=summaryTaxAndProducts status=SUCCESS method=CheckoutOverviewTest.summaryTaxAndProducts()[pri:0, instance:CheckoutOverviewTest@50a638b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:05:58 CET" name="setup" finished-at="2023-02-26T21:06:00 CET" duration-ms="1277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void CheckoutOverviewTest.totalPrice()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="totalPrice()[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:06:00 CET" name="totalPrice" finished-at="2023-02-26T21:06:01 CET" duration-ms="1625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalPrice -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:CheckoutOverviewTest@50a638b5]" started-at="2023-02-26T21:06:01 CET" name="getResult" finished-at="2023-02-26T21:06:01 CET" duration-ms="224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=totalPrice status=SUCCESS method=CheckoutOverviewTest.totalPrice()[pri:0, instance:CheckoutOverviewTest@50a638b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- CheckoutOverviewTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -145,7 +145,7 @@ public class CheckoutOverviewTest extends BaseTest {
                 .goToCheckoutOverview()
                 .finish();
         String confirmationOfOrder = driver.findElement(By.cssSelector(".complete-header")).getText();
-        String expectedConfirmationOfOrder = "THANK YOU FOR YOUR ORDER";
+        String expectedConfirmationOfOrder = "Thank you for your order!";
         Assert.assertEquals(confirmationOfOrder, expectedConfirmationOfOrder);
     }
 }
