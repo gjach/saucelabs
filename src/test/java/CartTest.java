@@ -40,7 +40,7 @@ public class CartTest extends BaseTest {
         cartPage
                 .checkCart(driver)
                 .continueShopping();
-        String expectedUrl = "https://www.saucedemo.com/inventory.html";
+        String expectedUrl = "https://www.saucedemo.com/inventory.html.";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
 
