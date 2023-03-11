@@ -88,7 +88,7 @@ public class BaseTest {
         String methodName = result.getMethod().getMethodName();
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
         String fileName = methodName + "_" + timeStamp + ".png";
-        String destination = System.getProperty("user.dir") + "/screenshots/" + fileName;
+        String destination = System.getProperty("user.dir") + File.separator + "/screenshots/" + File.separator + fileName;
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
         return ("http://localhost:8080/job/newtest/ws/screenshots/" + fileName);
