@@ -87,7 +87,7 @@ public class BaseTest {
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
         String methodName = result.getMethod().getMethodName();
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-        String fileName = methodName + "_" + timeStamp + ".png";
+        String fileName = "http://localhost:8080/job/newtest/ws/screenshots/" + methodName + "_" + timeStamp + ".png";
         String destination = System.getProperty("user.dir") + "/screenshots/" + fileName;
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
