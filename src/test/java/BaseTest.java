@@ -88,11 +88,11 @@ public class BaseTest {
         String methodName = result.getMethod().getMethodName();
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
         String fileName = "/screenshots/" + methodName + "_" + timeStamp + ".png";
-        String destination = System.getProperty("user.dir") + File.separator + "job" + File.separator + "newtest" + File.separator + "ws" + File.separator + methodName + "_" + timeStamp + ".png";
+        String destination = System.getProperty("user.dir") + fileName;
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
-//        String pathForJenkins = "job" "newtest" "ws" "screenshots" + methodName + "_" + timeStamp + ".png";
-        return destination;
+        String pathForJenkins = "http://localhost:8080/job/newtest/ws" + fileName;
+        return pathForJenkins;
     }
 }
 
