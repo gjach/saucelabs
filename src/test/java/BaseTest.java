@@ -91,7 +91,7 @@ public class BaseTest {
         String destination = System.getProperty("user.dir") + fileName;
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
-        String pathForJenkins = "/job/newtest/ws" + fileName;
+        String pathForJenkins = "http://localhost:8080/job/newtest/ws" + fileName;
         return pathForJenkins;
     }
 }
