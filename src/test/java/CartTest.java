@@ -72,7 +72,7 @@ public class CartTest extends BaseTest {
         cartPage
                 .checkCart(driver)
                 .goToCheckOut();
-        String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html";
+        String expectedUrl = "https://www.saucedemo.com/checkout-step-one.html.";
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
 
 
