@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -13,7 +14,10 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
+
 import com.aventstack.extentreports.ExtentTest;
 
 
@@ -47,7 +51,9 @@ public class BaseTest {
     @BeforeMethod
     public void setup(Method m) {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
@@ -63,7 +69,8 @@ public class BaseTest {
     public void getResult(ITestResult result) throws Exception {
         if (result.getStatus() == ITestResult.FAILURE) {
             logger.log(Status.FAIL, result.getThrowable());
-            captureScreenshot(driver, result.getTestName());
+            String screenshotPath = captureScreenshot(driver, result);
+            logger.addScreenCaptureFromPath(screenshotPath);
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             logger.log(Status.PASS, result.getTestName());
         } else {
@@ -74,18 +81,17 @@ public class BaseTest {
     }
 
 
-    public static void captureScreenshot(WebDriver driver, String screenshotName) throws Exception {
-        // Convert web driver object to TakeScreenshot
+    public static String captureScreenshot(WebDriver driver, ITestResult result) throws Exception {
+
         TakesScreenshot scrShot = ((TakesScreenshot) driver);
-
-        // Call getScreenshotAs method to create image file
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-
-        // Move image file to new destination
-        File DestFile = new File(System.getProperty("user.dir") + "/screenshots/" + screenshotName + ".png");
-
-        // Copy file at destination
+        String methodName = result.getMethod().getMethodName();
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+        String fileName = methodName + "_" + timeStamp + ".png";
+        String destination = System.getProperty("user.dir") + "/screenshots/" + fileName;
+        File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
+        return ("/screenshots/" + fileName);
     }
 }
 
