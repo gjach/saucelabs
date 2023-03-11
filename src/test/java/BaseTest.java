@@ -88,10 +88,10 @@ public class BaseTest {
         String methodName = result.getMethod().getMethodName();
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
         String fileName = "/screenshots/" + methodName + "_" + timeStamp + ".png";
-        String pathForJenkins = "/job/newtest/ws" + fileName;
-        String destination = System.getProperty("user.dir") + pathForJenkins;
+        String destination = System.getProperty("user.dir") + fileName;
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
+        String pathForJenkins = "/job/newtest/ws" + fileName;
         return pathForJenkins;
     }
 }
