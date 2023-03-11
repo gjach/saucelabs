@@ -91,8 +91,7 @@ public class BaseTest {
         String destination = System.getProperty("user.dir") + fileName;
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
-        String jenkinsScreenshot = "http://localhost:8080/job/newtest/ws/screenshots/" + methodName + "_" + timeStamp + ".png";
-        return jenkinsScreenshot;
+        return fileName;
     }
 }
 
