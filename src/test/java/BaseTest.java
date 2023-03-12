@@ -73,7 +73,7 @@ public class BaseTest {
             logger.log(Status.FAIL, result.getThrowable());
             String screenshotPath = captureScreenshot(driver, result);
 //            logger.addScreenCaptureFromPath(screenshotPath);
-            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build();
+            logger.fail("Screenshot: ", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             logger.log(Status.PASS, result.getTestName());
         } else {
