@@ -54,6 +54,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("headless");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
@@ -70,9 +71,9 @@ public class BaseTest {
     public void getResult(ITestResult result) throws Exception {
         if (result.getStatus() == ITestResult.FAILURE) {
             logger.log(Status.FAIL, result.getThrowable());
-            String screenshotPath = captureScreenshot(driver, result);
-            logger.addScreenCaptureFromPath(screenshotPath);
-            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build();
+//            String screenshotPath = captureScreenshot(driver, result);
+//            logger.addScreenCaptureFromPath(screenshotPath);
+            MediaEntityBuilder.createScreenCaptureFromPath("." + captureScreenshot(driver, result)).build();
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             logger.log(Status.PASS, result.getTestName());
         } else {
