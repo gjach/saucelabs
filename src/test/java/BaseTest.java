@@ -55,7 +55,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-//        options.addArguments("headless");
+        options.addArguments("headless");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
@@ -88,13 +88,6 @@ public class BaseTest {
 
         TakesScreenshot scrShot = ((TakesScreenshot) driver);
         String screenshot = scrShot.getScreenshotAs(OutputType.BASE64);
-//        String methodName = result.getMethod().getMethodName();
-//        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-//        String fileName = "/screenshots/" + methodName + "_" + timeStamp + ".png";
-//        String destination = System.getProperty("user.dir") + fileName;
-//        File DestFile = new File(destination);
-//        FileHandler.copy(SrcFile, DestFile);
-//        String pathForJenkins = "http://localhost:8080/job/newtest/ws" + fileName;
         return screenshot;
     }
 }
