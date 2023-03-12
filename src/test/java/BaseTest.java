@@ -71,8 +71,8 @@ public class BaseTest {
     public void getResult(ITestResult result) throws Exception {
         if (result.getStatus() == ITestResult.FAILURE) {
             logger.log(Status.FAIL, result.getThrowable());
-            String screenshotPath = captureScreenshot(driver, result);
-            logger.addScreenCaptureFromPath(screenshotPath);
+//            String screenshotPath = captureScreenshot(driver, result);
+//            logger.addScreenCaptureFromPath(screenshotPath);
             MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(driver, result)).build();
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             logger.log(Status.PASS, result.getTestName());
@@ -95,7 +95,7 @@ public class BaseTest {
         File DestFile = new File(destination);
         FileHandler.copy(SrcFile, DestFile);
 //        String pathForJenkins = "http://localhost:8080/job/newtest/ws" + fileName;
-        return destination;
+        return fileName;
     }
 }
 
