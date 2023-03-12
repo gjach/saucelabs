@@ -1,4 +1,5 @@
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -71,6 +72,7 @@ public class BaseTest {
             logger.log(Status.FAIL, result.getThrowable());
             String screenshotPath = captureScreenshot(driver, result);
             logger.addScreenCaptureFromPath(screenshotPath);
+            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build();
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             logger.log(Status.PASS, result.getTestName());
         } else {
