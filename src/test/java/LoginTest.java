@@ -43,6 +43,7 @@ public class LoginTest extends BaseTest {
         String errorPasswordMessage = driver.findElement(By.cssSelector("[class='error-message-container error']")).getText();
         String expectedPasswordErrorMessage = "Epic sadface: Password is required";
         Assert.assertEquals(errorPasswordMessage, expectedPasswordErrorMessage, "Error message is not correct");
+//        Assert.assertTrue(expectedURL == driver.getCurrentUrl());
     }
 
     @Test

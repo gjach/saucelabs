@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4714008-77ac-4e13-80b3-311e54af24aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extent.html" beforeDir="false" afterPath="$PROJECT_DIR$/extent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CartTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CartTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LoginTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +58,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CartTest">
+  <component name="RunManager" selected="TestNG.LoginTest.loginTest">
     <configuration name="CartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
@@ -60,11 +70,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.checkoutButton" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CartTest" />
-      <option name="METHOD_NAME" value="checkoutButton" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="METHOD_NAME" value="loginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -72,23 +82,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.continueShoppingButton" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Saucelabs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CartTest" />
-      <option name="METHOD_NAME" value="continueShoppingButton" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckoutOverviewTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Saucelabs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CheckoutOverviewTest" />
+      <option name="MAIN_CLASS_NAME" value="ProductTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductTest.removeProdAddedOnListing" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Saucelabs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProductTest" />
+      <option name="METHOD_NAME" value="removeProdAddedOnListing" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -107,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CartTest" />
-        <item itemvalue="TestNG.CartTest.continueShoppingButton" />
-        <item itemvalue="TestNG.CartTest.checkoutButton" />
+        <item itemvalue="TestNG.LoginTest.loginTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.CheckoutOverviewTest" />
+        <item itemvalue="TestNG.ProductTest.removeProdAddedOnListing" />
+        <item itemvalue="TestNG.CartTest" />
+        <item itemvalue="TestNG.ProductTest" />
       </list>
     </recent_temporary>
   </component>

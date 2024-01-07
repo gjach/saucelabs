@@ -48,7 +48,7 @@ public class ListingPage extends BasePage {
     }
 
     public ProductPage navigateToProduct(String productName) {
-        driver.findElement(By.xpath(".//*[@class='inventory_item_name' and text()='"+ productName +"']")).click();
+        driver.findElement(By.xpath(".//*[@class='inventory_item_name ' and text()='"+ productName +"']")).click();
         return new ProductPage(driver);
     }
 }
